@@ -1,0 +1,31 @@
+body{
+    position: relative;
+
+}
+#loginImage{
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+}
+#loginForm{
+    position: absolute;
+    right:0 ;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+}
+#loginForm>form{
+    position: absolute;
+    right:0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 10vw;
+    aspect-ratio: 1/1;
+    margin: auto;
+}
+#loginForm>form>button{
+    margin-top: 10px;
+}
