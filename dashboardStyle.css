@@ -1,7 +1,11 @@
 body{
     background-color: #DCF2F1;
+    position: relative;
+    height: 1000px;
+    width: 100vw;
 }
 .container-fluid{
+
     background-color: #365486;
 }
 #totalCustomer{
@@ -58,7 +62,8 @@ body{
     border-radius: 20px;
     margin: auto;
 }
-#labels>div>h1{
+
+#labels > div > h1 {
     position: absolute;
     width: fit-content;
     left: 0;
@@ -67,5 +72,129 @@ body{
     margin: auto;
 
 }
+
+#orderChartDiv {
+    position: absolute;
+    width: 35%;
+    height: 440px;
+    background-color: white;
+    left: 20px;
+    top: 300px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#itemChartDiv {
+    position: absolute;
+    width: 35%;
+    height: 440px;
+    background-color: white;
+    left: 40%;
+    top: 300px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#buttonDiv {
+    position: absolute;
+    width: 20%;
+    height: 400px;
+    right: 2%;
+    top: 300px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#buttonDiv > button {
+    border: solid white;
+    background-color: white;
+    width: 100%;
+    height: 33.33%;
+
+    border-radius: 10px;
+
+}
+
+#newCus {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#newOrder {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    font-family: "Times New Roman";
+    padding: 3px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+footer > div > h3 {
+    position: absolute;
+
+    font-family: "Times New Roman";
+    font-size: 10px;
+    right: 10px;
+   top: 0;
+   bottom: 0;
+    margin: auto;
+}
+
+#contactdiv {
+    top: 10px;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+}
+
+#emailDiv {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 43px;
+    margin: auto;
+}
+
+#locationdiv {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 40px;
+}
+#copy{
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+}
+#contact{
+    position: absolute;
+    top:10px;
+    width: fit-content;
+
+}
+footer > div >img{
+
+    position: absolute;
+    right: 150px;
+}
+
+
+
 
 
