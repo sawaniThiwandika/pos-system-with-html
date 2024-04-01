@@ -12,7 +12,7 @@ nav {
     z-index: 9999; /* Set a high z-index value */
 }
 #addDiv{
-    top: 100px;
+    top: 130px;
     position: absolute;
     background-color:#7FC7D9;
     width: 95%;
@@ -30,4 +30,32 @@ nav {
     right: 0;
     margin: 20px;
 
+}
+#updateDiv{
+    position: absolute;
+    left: 100px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}
+#deleteDiv{
+    position: absolute;
+    left: 200px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}
+#saveDiv{
+    position: absolute;
+    left:20px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}
+#customerList{
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 600px;
+    margin: auto;
 }
