@@ -1,0 +1,33 @@
+body{
+
+    position: relative;
+    height: 1000px;
+    width: 100vw;
+}
+.container-fluid{
+    background-color: #365486;
+}
+nav {
+    position: relative; /* Ensure the z-index works */
+    z-index: 9999; /* Set a high z-index value */
+}
+#addDiv{
+    top: 100px;
+    position: absolute;
+    background-color:#7FC7D9;
+    width: 95%;
+    height: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+
+}
+#addDiv>form{
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 20px;
+
+}
