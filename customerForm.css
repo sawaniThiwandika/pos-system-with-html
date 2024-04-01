@@ -59,3 +59,14 @@ nav {
     top: 600px;
     margin: auto;
 }
+#more{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 40px;
+    border-radius: 10px;
+    border: solid white;
+
+}
