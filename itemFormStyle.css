@@ -86,3 +86,74 @@ nav {
     background-color: white;
     border-radius: 10px;
 }
+#status>div>h2{
+     position: absolute;
+     left: 0;
+     right: 0;
+     margin: auto;
+     width: fit-content;
+ }
+#status>div>h1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    width: fit-content;
+}
+#categoryDiv>h2{
+    color: #0047FC;
+}
+
+#addDiv {
+    top: 450px;
+    position: absolute;
+    background-color: #7FC7D9;
+    width: 98%;
+    height: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+
+}
+#addDiv>h3{
+    position: absolute;
+    left: 20px;
+    top:20px;
+    margin: auto;
+}
+
+#addDiv > form {
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: 20px;
+
+}
+
+#updateDiv {
+    position: absolute;
+    left: 100px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}
+
+#deleteDiv {
+    position: absolute;
+    left: 200px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}
+
+#saveDiv {
+    position: absolute;
+    left: 20px;
+    right: 0;
+    bottom: -75px;
+    margin: auto;
+}

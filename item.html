@@ -58,6 +58,45 @@
     </div>
   </div>
 </div>
+<div id="addDiv">
+  <h3>Add Item</h3>
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationDefault01" class="form-label">Item Code</label>
+      <input type="text" class="form-control" id="validationDefault01" value="I001" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefault02" class="form-label">Unit Price</label>
+      <input type="number" class="form-control" id="validationDefault02" value="Otto" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationDefaultUsername" class="form-label">Category</label>
+      <div class="input-group">
+        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        <input type="search" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationDefault03" class="form-label">Name</label>
+      <input type="text" class="form-control" id="validationDefault03" required>
+    </div>
+    <div class="col-md-3">
+      <label for="validationDefault04" class="form-label">Qty</label>
+      <input type="number" class="form-control" id="validationDefault04" required>
+    </div>
+
+
+    <div class="col-12" id="saveDiv">
+      <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+    <div class="col-12" id="updateDiv">
+      <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+    <div class="col-12" id="deleteDiv">
+      <button class="btn btn-primary" type="submit">Delete</button>
+    </div>
+  </form >
+</div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
