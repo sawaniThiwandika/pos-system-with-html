@@ -13,3 +13,76 @@ nav {
     position: relative;
     z-index: 9999;
 }
+#statusDiv{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top:50px;
+    margin: auto;
+}
+#status{
+    width: 97%;
+    height: 200px;
+    position: absolute;
+    top:100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #365486;
+    border-radius: 20px;
+}
+#categoryDiv{
+    width: 18%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 20px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#productsDiv{
+    width: 18%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: calc(18% + 40px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#sellingDiv{
+    width: 18%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: calc(36% + 60px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#lowStockDiv{
+    width: 18%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: calc(54% + 80px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#outStockDiv{
+    width: 18%;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: calc(72% + 100px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}
