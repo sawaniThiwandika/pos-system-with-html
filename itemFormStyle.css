@@ -1,0 +1,15 @@
+body {
+
+    position: relative;
+    height: 1800px;
+    width: 100vw;
+}
+
+.container-fluid {
+    background-color: #365486;
+}
+
+nav {
+    position: relative;
+    z-index: 9999;
+}

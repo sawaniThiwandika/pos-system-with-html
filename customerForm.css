@@ -331,8 +331,8 @@
     }
 
     nav {
-        position: relative; /* Ensure the z-index works */
-        z-index: 9999; /* Set a high z-index value */
+        position: relative;
+        z-index: 9999;
     }
 
     #addDiv {
