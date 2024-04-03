@@ -314,15 +314,21 @@ footer > div >img{
     }
 
     #newCus {
+
         margin-top: 0;
         margin-bottom: 10px;
     }
 
     #newOrder {
+
         margin-top: 10px;
         margin-bottom: 0;
     }
 
+    buttonDiv>button>a{
+        text-decoration: none;
+        font-size: 20px;
+    }
     footer {
         position: absolute;
         text-align: center;
