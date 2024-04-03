@@ -176,6 +176,39 @@
         color: white;
         font-size: 20px;
     }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 800px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
 
 }
 @media only screen and (min-width: 834px) {
@@ -442,5 +475,39 @@
         color: white;
         font-size: 20px;
     }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1220px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+
 
 }
