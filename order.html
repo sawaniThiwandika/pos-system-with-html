@@ -56,8 +56,8 @@
                 </div>
             </div>-->
             <div class="col-md-6">
-                <label for="validationDefault03" class="form-label">Customer Name</label>
-                <input type="text" class="form-control" id="validationDefault03" required>
+                <label for="validationDefault03" class="form-label" >Customer Name</label>
+                <input type="text" class="form-control" id="validationDefault03" required >
             </div>
             <!--<div class="col-md-3">
                 <label for="validationDefault04" class="form-label">Qty</label>
@@ -72,8 +72,110 @@
             <button class="btn btn-primary" type="submit">Select</button>
         </div>
     </div>
-    <div id="selectItemDiv"></div>
-    <div id="cartTable"></div>
+    <div id="selectItemDiv">
+        <h3>Select Item</h3>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="validationDefault05" class="form-label">Item code</label>
+                <input type="text" class="form-control" id="validationDefault05" value="I001" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault06" class="form-label">Qty</label>
+                <input type="number" class="form-control" id="validationDefault06" value="Otto" required>
+            </div>
+            <!-- <div class="col-md-4">
+                 &lt;!&ndash;<label for="validationDefaultUsername" class="form-label">Category</label>
+                 <div class="input-group">
+                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                     <input type="search" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                 </div>&ndash;&gt;
+             </div>-->
+            <div class="col-md-6">
+                <label for="validationDefault07" class="form-label">Item Name</label>
+                <input type="text" class="form-control" id="validationDefault07" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault08" class="form-label">Unit Price</label>
+                <input type="text" class="form-control" id="validationDefault08" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault09" class="form-label">Total Price</label>
+                <input type="text" class="form-control" id="validationDefault09" required>
+            </div>
+            <!--<div class="col-md-3">
+                <label for="validationDefault04" class="form-label">Qty</label>
+                <input type="number" class="form-control" id="validationDefault04" required>
+            </div>-->
+
+
+
+
+        </form >
+        <div class="col-12" id="addToCartDiv">
+            <button class="btn btn-primary" type="submit">Add to Cart</button>
+        </div>
+
+    </div>
+    <div id="cartTable">
+        <h3> Cart</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+
+
+
+
+            </tbody>
+        </table>
+        <button id="more">See More</button>
+
+    </div>
 </div>
 
 
