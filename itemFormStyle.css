@@ -160,6 +160,40 @@
         margin: auto;
     }
 
+    #itemList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 950px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #itemList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+
 }
 
 @media only screen and (min-width: 834px) {
@@ -321,6 +355,40 @@
         right: 0;
         bottom: -75px;
         margin: auto;
+    }
+
+    #itemList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 950px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #itemList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
     }
 
 
@@ -490,6 +558,39 @@
         right: 0;
         bottom: -75px;
         margin: auto;
+    }
+    #itemList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1200px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #itemList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
     }
 
 }
