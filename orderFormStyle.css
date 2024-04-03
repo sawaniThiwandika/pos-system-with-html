@@ -108,6 +108,7 @@
         width: fit-content;
         top: 10px;
     }
+
     /*#cartTable{
         position: absolute;
         left:0;
@@ -146,6 +147,34 @@
         left: 0;
         right: 0;
         margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:600px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
     }
 
 }
@@ -385,6 +414,33 @@
         right: 0;
         margin: auto;
     }
-
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:1050px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
 
 }
