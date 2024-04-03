@@ -1,0 +1,253 @@
+@media only screen and (min-width:1402px){
+    body{
+
+        position: relative;
+        height: 1500px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 26%;
+        height: 400px;
+        position: absolute;
+        left: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 26%;
+        height: 400px;
+        position: absolute;
+        left: 27.5%;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 45%;
+        height: 400px;
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 150px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 30px;
+        margin: auto;
+
+    }
+    #saveDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+}
+@media only screen and (min-width: 834px) {
+   /* body{
+
+        position: relative;
+        height: 1500px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; !* Ensure the z-index works *!
+        z-index: 9999; !* Set a high z-index value *!
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 26%;
+        height: 400px;
+        position: absolute;
+        left: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 26%;
+        height: 400px;
+        position: absolute;
+        left: 27.5%;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 45%;
+        height: 400px;
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 150px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 30px;
+        margin: auto;
+
+    }
+    #saveDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }*/
+}
+@media only screen and (max-width: 1402px) {
+    body{
+
+        position: relative;
+        height: 2000px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 55%;
+        top:20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 95%;
+        height: 400px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:500px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #saveDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+}
