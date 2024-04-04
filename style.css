@@ -21,6 +21,7 @@
         bottom: 0;
         margin: auto;
         height: 400px;
+        width: 100%;
     }
 
     #loginForm{
@@ -126,7 +127,7 @@
         top: 0;
         bottom: 0;
         margin: auto;
-        height: 400px;
+        width: 100%;
     }
     #loginForm{
 
@@ -231,7 +232,7 @@
         top: 0;
         bottom: 0;
         margin: auto;
-        height: 400px;
+        width: 100%;
     }
     #loginForm{
 
@@ -336,7 +337,7 @@
         top: 0;
         bottom: 0;
         margin: auto;
-        height: 400px;
+       width: 100%;
     }
 
     #loginForm{
