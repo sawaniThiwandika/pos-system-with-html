@@ -1,16 +1,17 @@
-@media only screen and (min-width:1402px){
-    body{
+
+/*@media only screen and (min-width: 834px) {
+   !* body{
 
         position: relative;
-        height: 1600px;
+        height: 1500px;
         width: 100vw;
     }
     .container-fluid{
         background-color: #365486;
     }
     nav {
-        position: relative; /* Ensure the z-index works */
-        z-index: 9999; /* Set a high z-index value */
+        position: relative; !* Ensure the z-index works *!
+        z-index: 9999; !* Set a high z-index value *!
     }
     #addOrderDiv{
         width: 100%;
@@ -23,7 +24,7 @@
     }
     #selectCusDiv{
         width: 26%;
-        height: 450px;
+        height: 400px;
         position: absolute;
         left: 10px;
         bottom: 50px;
@@ -33,7 +34,7 @@
     }
     #selectItemDiv{
         width: 26%;
-        height: 450px;
+        height: 400px;
         position: absolute;
         left: 27.5%;
         bottom: 50px;
@@ -43,7 +44,7 @@
     }
     #cartTable{
         width: 45%;
-        height: 450px;
+        height: 400px;
         position: absolute;
         right: 10px;
         bottom: 50px;
@@ -64,7 +65,7 @@
         position: absolute;
         left:20px;
         right: 0;
-        bottom: 20px;
+        bottom: 30px;
         margin: auto;
 
     }
@@ -78,6 +79,110 @@
         position: absolute;
         width: fit-content;
         top: 10px;
+    }*!
+}*/
+
+
+
+@media all and (max-width: 320px ){
+
+    body{
+
+        position: relative;
+        height: 2750px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 95%;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 95%;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:600px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 95%;
+        height: 450px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:1200px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    /*   #selectCusDiv> form{
+           position: absolute;
+           width: 95%;
+           left: 0;
+           right: 0;
+           margin: auto;
+           top:100px;
+
+       }*/
+    #saveDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #saveDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
     }
 
     #selectItemDiv> form{
@@ -86,7 +191,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 75px;
+        top: 50px;
 
     }
     #addToCartDiv{
@@ -108,18 +213,6 @@
         width: fit-content;
         top: 10px;
     }
-
-    /*#cartTable{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 550px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        border-radius: 10px;
-
-    }*/
     #more{
         position: absolute;
         left: 0;
@@ -152,7 +245,10 @@
         width: 100%;
         height: 100px;
         position: absolute;
-        top:600px;
+        top:1750px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     #totalLabel{
         position: absolute;
@@ -180,7 +276,7 @@
         position: absolute;
         left:0;
         right: 0;
-        top: 750px;
+        top: 1950px;
         width: 98%;
         margin: auto;
         height: 600px;
@@ -192,7 +288,297 @@
         position: absolute;
         left: 0;
         right: 0;
+        bottom: 20px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    footer{
+        position: absolute;
+        text-align: center;
+        font-family: "Times New Roman";
+        padding: 3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    footer > div > h3 {
+        position: absolute;
+
+        font-family: "Times New Roman";
+        font-size: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #contactdiv {
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+
+    #emailDiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 43px;
+        margin: auto;
+    }
+
+    #locationdiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 40px;
+    }
+    #copy{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 10px;
+    }
+    #contact{
+        position: absolute;
+        top:10px;
+        width: fit-content;
+
+    }
+    footer > div >img{
+
+        position: absolute;
+        right: 150px;
+    }
+}
+@media all and (min-width: 321px ) and (max-width: 460px){
+
+    body{
+
+        position: relative;
+        height: 2750px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 95%;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 95%;
+        height: 550px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:600px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 95%;
+        height: 450px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:1200px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    /*   #selectCusDiv> form{
+           position: absolute;
+           width: 95%;
+           left: 0;
+           right: 0;
+           margin: auto;
+           top:100px;
+
+       }*/
+    #saveDiv{
+        position: absolute;
+        left:0;
+        right: 0;
         bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #saveDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+
+    #selectItemDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50px;
+
+    }
+    #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #addToCartDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectItemDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #cartTable>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    #cartTable>h3{
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:1750px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1950px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
         margin: auto;
         width: 98%;
         height: 40px;
@@ -278,79 +664,88 @@
         right: 150px;
     }
 
+
 }
-@media only screen and (min-width: 834px) {
-   /* body{
+@media all and (min-width: 461px ) and (max-width: 768px){
+
+    body{
 
         position: relative;
-        height: 1500px;
+        height: 2300px;
         width: 100vw;
     }
     .container-fluid{
         background-color: #365486;
     }
     nav {
-        position: relative; !* Ensure the z-index works *!
-        z-index: 9999; !* Set a high z-index value *!
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
     }
     #addOrderDiv{
         width: 100%;
-        height: 500px;
+        height: 1000px;
         position: absolute;
         left: 0;
         right: 0;
-        top: 100px;
+        top: 50px;
         margin: auto;
     }
     #selectCusDiv{
-        width: 26%;
-        height: 400px;
+        width: 50%;
+        height: 550px;
         position: absolute;
         left: 10px;
-        bottom: 50px;
+        top: 20px;
         margin: auto;
         background-color: #7FC7D9;
         border-radius: 10px;
     }
     #selectItemDiv{
-        width: 26%;
-        height: 400px;
+        width: 50%;
+        height: 550px;
         position: absolute;
-        left: 27.5%;
-        bottom: 50px;
+        left: 55%;
+        top:20px;
         margin: auto;
         background-color: #7FC7D9;
         border-radius: 10px;
     }
     #cartTable{
-        width: 45%;
-        height: 400px;
+        width: 95%;
+        height: 450px;
         position: absolute;
-        right: 10px;
-        bottom: 50px;
+        right: 0;
+        left: 0;
+        top:620px;
         margin: auto;
         background-color: #7FC7D9;
         border-radius: 10px;
     }
-    #selectCusDiv> form{
+ /*   #selectCusDiv> form{
         position: absolute;
         width: 95%;
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 150px;
+        top:100px;
 
-    }
+    }*/
     #saveDiv{
         position: absolute;
-        left:20px;
+        left:0;
         right: 0;
-        bottom: 30px;
+        bottom: 10px;
         margin: auto;
+        width: 100%;
 
     }
     #saveDiv>button{
-        width: 90%;
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -359,9 +754,207 @@
         position: absolute;
         width: fit-content;
         top: 10px;
-    }*/
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+
+    #selectItemDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50px;
+
+    }
+    #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #addToCartDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectItemDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #cartTable>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    #cartTable>h3{
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:1150px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1370px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    footer{
+        position: absolute;
+        text-align: center;
+        font-family: "Times New Roman";
+        padding: 3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    footer > div > h3 {
+        position: absolute;
+
+        font-family: "Times New Roman";
+        font-size: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #contactdiv {
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+
+    #emailDiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 43px;
+        margin: auto;
+    }
+
+    #locationdiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 40px;
+    }
+    #copy{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 10px;
+    }
+    #contact{
+        position: absolute;
+        top:10px;
+        width: fit-content;
+
+    }
+    footer > div >img{
+
+        position: absolute;
+        right: 150px;
+    }
+
+
+
 }
-@media only screen and (max-width: 1402px) {
+@media all and (min-width: 769px ) and (max-width: 834px){
     body{
 
         position: relative;
@@ -645,5 +1238,854 @@
         right: 150px;
     }
 
+}
+@media all and (min-width: 835px ) and (max-width: 1024px){
+    body{
 
+        position: relative;
+        height: 2000px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 55%;
+        top:20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 95%;
+        height: 450px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:500px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #saveDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+
+    #selectItemDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 75px;
+
+    }
+    #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #addToCartDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectItemDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #cartTable>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    #cartTable>h3{
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:1050px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1220px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    footer{
+        position: absolute;
+        text-align: center;
+        font-family: "Times New Roman";
+        padding: 3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    footer > div > h3 {
+        position: absolute;
+
+        font-family: "Times New Roman";
+        font-size: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #contactdiv {
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+
+    #emailDiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 43px;
+        margin: auto;
+    }
+
+    #locationdiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 40px;
+    }
+    #copy{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 10px;
+    }
+    #contact{
+        position: absolute;
+        top:10px;
+        width: fit-content;
+
+    }
+    footer > div >img{
+
+        position: absolute;
+        right: 150px;
+    }
+
+}
+@media all and (min-width: 1025px ) and (max-width: 1440px){
+    body{
+
+        position: relative;
+        height: 2000px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 50%;
+        height: 400px;
+        position: absolute;
+        left: 55%;
+        top:20px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 95%;
+        height: 450px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top:500px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #saveDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top:50px;
+
+    }
+
+    #selectItemDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 75px;
+
+    }
+    #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #addToCartDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectItemDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #cartTable>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    #cartTable>h3{
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:1050px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 1220px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    footer{
+        position: absolute;
+        text-align: center;
+        font-family: "Times New Roman";
+        padding: 3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    footer > div > h3 {
+        position: absolute;
+
+        font-family: "Times New Roman";
+        font-size: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #contactdiv {
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+
+    #emailDiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 43px;
+        margin: auto;
+    }
+
+    #locationdiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 40px;
+    }
+    #copy{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 10px;
+    }
+    #contact{
+        position: absolute;
+        top:10px;
+        width: fit-content;
+
+    }
+    footer > div >img{
+
+        position: absolute;
+        right: 150px;
+    }
+
+}
+@media all and  (min-width:1440px){
+    body{
+
+        position: relative;
+        height: 1600px;
+        width: 100vw;
+    }
+    .container-fluid{
+        background-color: #365486;
+    }
+    nav {
+        position: relative; /* Ensure the z-index works */
+        z-index: 9999; /* Set a high z-index value */
+    }
+    #addOrderDiv{
+        width: 100%;
+        height: 500px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+    }
+    #selectCusDiv{
+        width: 26%;
+        height: 450px;
+        position: absolute;
+        left: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectItemDiv{
+        width: 26%;
+        height: 450px;
+        position: absolute;
+        left: 27.5%;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #cartTable{
+        width: 45%;
+        height: 450px;
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        margin: auto;
+        background-color: #7FC7D9;
+        border-radius: 10px;
+    }
+    #selectCusDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 150px;
+
+    }
+    #saveDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #saveDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectCusDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+
+    #selectItemDiv> form{
+        position: absolute;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 75px;
+
+    }
+    #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #addToCartDiv>button{
+        width: 90%;
+    }
+    #addOrderDiv>#selectItemDiv>h3{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width: fit-content;
+        top: 10px;
+    }
+
+    /*#cartTable{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 550px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        border-radius: 10px;
+
+    }*/
+    #more{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #cartTable>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    #cartTable>h3{
+        width: fit-content;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #placeOrderDiv{
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top:600px;
+    }
+    #totalLabel{
+        position: absolute;
+        top: 0;
+        right: 200px;
+    }
+    #totalValue{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #placeOrder{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        width: 300px;
+        height: 50px;
+        background-color:#0d6efd;
+        border: solid #0d6efd;
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+    }
+    #orderList{
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 750px;
+        width: 98%;
+        margin: auto;
+        height: 600px;
+        background-color: #DCF2F1;
+        border-radius: 10px;
+
+    }
+    #moreOrders{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 98%;
+        height: 40px;
+        border-radius: 10px;
+        border: solid white;
+
+    }
+    #orderList>table{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 75px;
+        margin: auto;
+        width: 98%;
+        height: 75%;
+    }
+    footer{
+        position: absolute;
+        text-align: center;
+        font-family: "Times New Roman";
+        padding: 3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    footer > div > h3 {
+        position: absolute;
+
+        font-family: "Times New Roman";
+        font-size: 10px;
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #contactdiv {
+        top: 10px;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin: auto;
+    }
+
+    #emailDiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        top: 43px;
+        margin: auto;
+    }
+
+    #locationdiv {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        bottom: 40px;
+    }
+    #copy{
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 10px;
+    }
+    #contact{
+        position: absolute;
+        top:10px;
+        width: fit-content;
+
+    }
+    footer > div >img{
+
+        position: absolute;
+        right: 150px;
+    }
 }
