@@ -694,6 +694,11 @@
         position: absolute;
         right: 150px;
     }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 80px;
+    }
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
     body {

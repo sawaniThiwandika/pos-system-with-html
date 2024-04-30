@@ -373,6 +373,11 @@
         position: absolute;
         right: 150px;
     }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 80px;
+    }
 }
 @media all and (min-width: 321px ) and (max-width: 460px){
 
@@ -663,7 +668,11 @@
         position: absolute;
         right: 150px;
     }
-
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 80px;
+    }
 
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
@@ -950,8 +959,16 @@
         position: absolute;
         right: 150px;
     }
-
-
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 80px;
+    }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 80px;
+    }
 
 }
 @media all and (min-width: 769px ) and (max-width: 834px){
@@ -1236,6 +1253,11 @@
 
         position: absolute;
         right: 150px;
+    }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 100px;
     }
 
 }
@@ -1522,6 +1544,11 @@
         position: absolute;
         right: 150px;
     }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 100px;
+    }
 
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
@@ -1807,6 +1834,11 @@
         position: absolute;
         right: 150px;
     }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 120px;
+    }
 
 }
 @media all and  (min-width:1440px){
@@ -2087,5 +2119,10 @@
 
         position: absolute;
         right: 150px;
+    }
+    footer>img{
+        position: absolute;
+        left: 10px;
+        width: 120px;
     }
 }
