@@ -414,6 +414,26 @@
         border-radius: 10px;
 
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 50%;
+        height: 35px;
+        border: none;
+        right: 50px;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
 
     #more {
         position: absolute;
@@ -432,7 +452,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
@@ -598,6 +618,26 @@
         border-radius: 10px;
 
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 50%;
+        height: 35px;
+        border: none;
+        right: 50px;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
 
     #more {
         position: absolute;
@@ -616,7 +656,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
@@ -780,6 +820,26 @@
         height: 600px;
         background-color: #DCF2F1;
         border-radius: 10px;
+
+    }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 50%;
+        height: 35px;
+        border: none;
+        right: 50px;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
 
     }
 
@@ -973,6 +1033,27 @@
         bottom: -75px;
         margin: auto;
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 30%;
+        height:35px;
+        border: none;
+        left: 0;
+        right: 0;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
 
     #more {
         position: absolute;
@@ -991,7 +1072,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
@@ -1142,6 +1223,27 @@
         border-radius: 10px;
 
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 30%;
+        height: 40px;
+        border: none;
+        left: 0;
+        right: 0;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
     #resetDiv{
         position: absolute;
         left:300px;
@@ -1165,7 +1267,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
@@ -1321,6 +1423,27 @@
         border-radius: 10px;
 
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 30%;
+        height: 40px;
+        border: none;
+        left: 0;
+        right: 0;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
     #more{
         position: absolute;
         left: 0;
@@ -1337,7 +1460,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
@@ -1492,6 +1615,27 @@
         border-radius: 10px;
 
     }
+    #customerList>h3{
+        position: absolute;
+        width: fit-content;
+        margin: 20px;
+    }
+
+    #searchBarOrders{
+
+        position: absolute;
+        width: 30%;
+        height: 40px;
+        border: none;
+        left: 0;
+        right: 0;
+        top: 50px;
+        border-radius: 12px;
+        text-align: justify;
+        margin: auto;
+
+
+    }
     #more{
         position: absolute;
         left: 0;
@@ -1508,7 +1652,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        bottom: 30px;
         margin: auto;
         width: 98%;
         height: 75%;
