@@ -980,6 +980,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -1012,14 +1022,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
+       /* bottom: 30px;*/
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 400px;
     }
     footer{
         position: absolute;
@@ -1274,6 +1285,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 400px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -1306,14 +1327,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        top: 0;
+       /* bottom: 50px;*/
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 400px;
     }
     footer{
         position: absolute;
@@ -1566,6 +1588,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 450px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -1598,14 +1630,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        top: 0;
+    /*    bottom: 50px;*/
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 450px;
     }
     footer{
         position: absolute;
@@ -1860,6 +1893,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 450px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -1893,14 +1936,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
+       /* bottom: 30px;*/
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 450px;
     }
     footer{
         position: absolute;
@@ -2150,6 +2194,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 450px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -2183,14 +2237,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 20px;
+    /*    bottom: 20px;*/
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 450px;
     }
     footer{
         position: absolute;
@@ -2440,6 +2495,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -2473,14 +2538,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        /*bottom: 30px;*/
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+        height: 470px;
     }
     footer{
         position: absolute;
@@ -2730,6 +2796,16 @@
         border-radius: 10px;
 
     }
+    #itemTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #itemList>h3{
         position: absolute;
         width: fit-content;
@@ -2763,14 +2839,15 @@
         border: solid white;
 
     }
-    #itemList>table{
+    #itemList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+       /* bottom: 30px;*/
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+       /* height: 470px;*/
     }
     footer{
         position: absolute;
