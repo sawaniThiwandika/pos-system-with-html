@@ -141,6 +141,18 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+        width: 98%;
+        height: 380px;
+        overflow: auto;
+        overflow-x: auto;
+    }
+
     /*   #selectCusDiv> form{
            position: absolute;
            width: 95%;
@@ -229,14 +241,15 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+
+
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -471,6 +484,17 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+        width: 98%;
+        height: 380px;
+        overflow: auto;
+    }
+
     /*   #selectCusDiv> form{
            position: absolute;
            width: 95%;
@@ -559,14 +583,15 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -801,15 +826,26 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
- /*   #selectCusDiv> form{
+    #cartTableDiv{
         position: absolute;
-        width: 95%;
         left: 0;
         right: 0;
+        top: 50px;
         margin: auto;
-        top:100px;
+        width: 98%;
+        height: 370px;
+        overflow: auto;
+    }
 
-    }*/
+    /*   #selectCusDiv> form{
+           position: absolute;
+           width: 95%;
+           left: 0;
+           right: 0;
+           margin: auto;
+           top:100px;
+
+       }*/
     #saveDiv{
         position: absolute;
         left:0;
@@ -889,14 +925,14 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -1131,6 +1167,17 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+        width: 98%;
+        height: 370px;
+        overflow: auto;
+    }
+
     #selectCusDiv> form{
         position: absolute;
         width: 95%;
@@ -1219,14 +1266,14 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -1422,11 +1469,11 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 50px;
+        top: 70px;
         margin: auto;
     }
     #selectCusDiv{
-        width: 50%;
+        width: 46%;
         height: 400px;
         position: absolute;
         left: 10px;
@@ -1436,10 +1483,10 @@
         border-radius: 10px;
     }
     #selectItemDiv{
-        width: 50%;
+        width: 46%;
         height: 400px;
         position: absolute;
-        left: 55%;
+        left: 52%;
         top:20px;
         margin: auto;
         background-color: #7FC7D9;
@@ -1456,6 +1503,17 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        margin: auto;
+        width: 98%;
+        height: 370px;
+        overflow: auto;
+    }
+
     #selectCusDiv> form{
         position: absolute;
         width: 95%;
@@ -1544,14 +1602,14 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top:0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -1747,24 +1805,24 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 50px;
+        top: 70px;
         margin: auto;
     }
     #selectCusDiv{
-        width: 50%;
+        width: 46%;
         height: 400px;
         position: absolute;
-        left: 10px;
+        left: 2%;
         top: 20px;
         margin: auto;
         background-color: #7FC7D9;
         border-radius: 10px;
     }
     #selectItemDiv{
-        width: 50%;
+        width: 46%;
         height: 400px;
         position: absolute;
-        left: 55%;
+        right: 2%;
         top:20px;
         margin: auto;
         background-color: #7FC7D9;
