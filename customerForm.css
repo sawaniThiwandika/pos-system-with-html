@@ -1,7 +1,7 @@
 
-@media only screen and (min-width: 1300px){
+/*@media only screen and (min-width: 1300px){
 
-}
+}*/
 
 /*
 @media only screen and (min-width: 834px) {
@@ -414,6 +414,7 @@
         border-radius: 10px;
 
     }
+
     #customerList>h3{
         position: absolute;
         width: fit-content;
@@ -1556,7 +1557,7 @@
         z-index: 9999;
     }
     #addDiv{
-        top: 100px;
+        top: 120px;
         position: absolute;
         background-color:#7FC7D9;
         width: 98%;
@@ -1603,17 +1604,28 @@
         bottom: -75px;
         margin: auto;
     }
+
     #customerList{
         position: absolute;
         left:0;
         right: 0;
         top: 550px;
-        width: 98%;
+        width: 100%;
         margin: auto;
-        height: 600px;
+        height: 720px;
         background-color: #DCF2F1;
         border-radius: 10px;
 
+    }
+    #cusTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 120px;
+        margin: auto;
+        width: 98%;
+        height: 550px;
+        overflow: auto;
     }
     #customerList>h3{
         position: absolute;
@@ -1648,14 +1660,14 @@
         border: solid white;
 
     }
-    #customerList>table{
+    #customerList>#cusTableDiv>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
         margin: auto;
         width: 98%;
-        height: 75%;
+        height: 550px;
+        border-radius: 10px;
     }
 
 
