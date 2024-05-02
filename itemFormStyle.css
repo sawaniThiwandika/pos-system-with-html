@@ -944,10 +944,9 @@
         margin: 20px;
 
     }
-
     #updateDiv {
         position: absolute;
-        left: 100px;
+        left: 80px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -955,7 +954,7 @@
 
     #deleteDiv {
         position: absolute;
-        left: 200px;
+        left: 175px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -963,7 +962,14 @@
 
     #saveDiv {
         position: absolute;
-        left: 20px;
+        left: 5px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
+    #resetDiv{
+        position: absolute;
+        left:270px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -1252,7 +1258,7 @@
 
     #updateDiv {
         position: absolute;
-        left: 100px;
+        left: 80px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -1260,7 +1266,7 @@
 
     #deleteDiv {
         position: absolute;
-        left: 200px;
+        left: 175px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -1268,7 +1274,14 @@
 
     #saveDiv {
         position: absolute;
-        left: 20px;
+        left: 5px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
+    #resetDiv{
+        position: absolute;
+        left:270px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -1576,6 +1589,13 @@
         bottom: -75px;
         margin: auto;
     }
+    #resetDiv{
+        position: absolute;
+        left:300px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
     #itemList{
         position: absolute;
         left:0;
@@ -1719,7 +1739,7 @@
     body {
 
         position: relative;
-        height: 2000px;
+        height: 1800px;
         width: 100vw;
     }
 
@@ -1834,7 +1854,7 @@
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
-        height: 600px;
+        height: 400px;
         left: 0;
         right: 0;
         margin: auto;
@@ -1881,11 +1901,18 @@
         bottom: -75px;
         margin: auto;
     }
+    #resetDiv{
+        position: absolute;
+        left:300px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
     #itemList{
         position: absolute;
         left:0;
         right: 0;
-        top: 1200px;
+        top: 1000px;
         width: 98%;
         margin: auto;
         height: 600px;
@@ -2177,6 +2204,13 @@
     #saveDiv {
         position: absolute;
         left: 20px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
+    #resetDiv{
+        position: absolute;
+        left:300px;
         right: 0;
         bottom: -75px;
         margin: auto;
@@ -2482,6 +2516,13 @@
         bottom: -75px;
         margin: auto;
     }
+    #resetDiv{
+        position: absolute;
+        left:300px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
 
     #itemList{
         position: absolute;
@@ -2779,6 +2820,13 @@
     #saveDiv {
         position: absolute;
         left: 20px;
+        right: 0;
+        bottom: -75px;
+        margin: auto;
+    }
+    #resetDiv{
+        position: absolute;
+        left:300px;
         right: 0;
         bottom: -75px;
         margin: auto;
