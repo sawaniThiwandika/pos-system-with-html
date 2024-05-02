@@ -284,6 +284,16 @@
         border-radius: 10px;
 
     }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 460px;
+        overflow: auto;
+    }
     #moreOrders{
         position: absolute;
         left: 0;
@@ -317,14 +327,14 @@
 
 
     }
-    #orderList>table{
+    #orderList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
@@ -600,6 +610,16 @@
         border-radius: 10px;
 
     }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 460px;
+        overflow: auto;
+    }
     #moreOrders{
         position: absolute;
         left: 0;
@@ -612,14 +632,14 @@
         border: solid white;
 
     }
-    #orderList>table{
+    #orderList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     #orderList>h3{
         position: absolute;
@@ -908,10 +928,20 @@
         top: 1370px;
         width: 98%;
         margin: auto;
-        height: 600px;
+        height: 630px;
         background-color: #DCF2F1;
         border-radius: 10px;
 
+    }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
     }
     #orderList>h3{
         position: absolute;
@@ -946,14 +976,14 @@
         border: solid white;
 
     }
-    #orderList>table{
+    #orderList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
@@ -1229,6 +1259,16 @@
         border-radius: 10px;
 
     }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #orderList>h3{
         position: absolute;
         width: fit-content;
@@ -1262,14 +1302,14 @@
         border: solid white;
 
     }
-    #orderList>table{
+    #orderList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top:0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
@@ -1540,13 +1580,23 @@
         border-radius: 10px;
 
     }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #orderList>h3{
         position: absolute;
         width: fit-content;
         margin: 20px;
     }
 
-    #searchBarOrders {
+    #searchBarOrders{
 
         position: absolute;
         width: 40%;
@@ -1573,14 +1623,14 @@
         border: solid white;
 
     }
-    #orderList>table{
+    #orderList>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
@@ -1851,6 +1901,16 @@
         border-radius: 10px;
 
     }
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #orderList>h3{
         position: absolute;
         width: fit-content;
@@ -1888,10 +1948,10 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top:0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
@@ -2158,6 +2218,17 @@
         border-radius: 10px;
 
     }
+
+    #orderTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top :120px;
+        margin: auto;
+        width: 98%;
+        height: 470px;
+        overflow: auto;
+    }
     #orderList>h3{
        position: absolute;
         width: fit-content;
@@ -2192,14 +2263,14 @@
         border: solid white;
 
     }
-    #orderList>table {
+    #orderList>div>table {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 50px;
+        top:0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
     }
     footer{
         position: absolute;
