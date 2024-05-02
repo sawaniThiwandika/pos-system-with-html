@@ -166,6 +166,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -204,6 +206,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -492,6 +496,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -530,6 +536,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -818,6 +826,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -856,6 +866,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -1144,6 +1156,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -1182,6 +1196,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -1465,6 +1481,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -1503,6 +1521,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -1761,6 +1781,15 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;right: 0;
+        top: 50px;
+        margin: auto;
+        width: 98%;
+        height: 380px;
+        overflow: auto;
+    }
     #selectCusDiv> form{
         position: absolute;
         width: 95%;
@@ -1786,6 +1815,8 @@
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -1824,6 +1855,8 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
@@ -1845,14 +1878,15 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 70px;
+        top: 0;
         margin: auto;
-        width: 98%;
-        height: 75%;
+        width: 100%;
+
+
     }
     #cartTable>h3{
         width: fit-content;
@@ -2081,6 +2115,16 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #cartTableDiv{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        margin: auto;
+        width: 98%;
+        height: 450px;
+        overflow: auto;
+    }
     #selectCusDiv> form{
         position: absolute;
         width: 95%;
@@ -2100,6 +2144,8 @@
     }
     #saveDiv>button{
         width: 90%;
+        background-color:#00B332;
+        border-color:#00B332;
     }
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
@@ -2129,7 +2175,10 @@
     }
     #addToCartDiv>button{
         width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
     }
+
     #addOrderDiv>#selectItemDiv>h3{
         left: 0;
         right: 0;
@@ -2162,7 +2211,7 @@
         border: solid white;
 
     }
-    #cartTable>table{
+    #cartTable>div>table{
         position: absolute;
         left: 0;
         right: 0;
