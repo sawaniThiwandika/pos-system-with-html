@@ -40,6 +40,12 @@
         footer{
             position: relative;
         }
+        .Open{
+            display: block;
+        }
+        .close{
+            display: none;
+        }
 
     </style>
 
@@ -58,16 +64,16 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="dashboard.html" style="color: white">Dashboard</a>
+                        <span class="nav-link active" aria-current="page" href="#" id="nav-dashboard" style="color: white">Dashboard</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="order.html" style="color: white">Orders</a>
+                        <span class="nav-link active" href="#" id= "nav-orders" style="color: white">Orders</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="customer.html" style="color: white">Customers</a>
+                        <span class="nav-link active" href="#" id= "nav-customers" style="color: white">Customers</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="item.html" style="color: white">Inventory</a>
+                        <span class="nav-link active" href="#" id= "nav-inventory" style="color: white">Inventory</span>
                     </li>
                 </ul>
                 >
@@ -664,6 +670,42 @@
 
 
 </footer>
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+<script>
+    $('#nav-dashboard').on('click',()=>{
+        $('#dashboardSection').removeClass("close");
+        $('#customerSection').addClass("close");
+        $('#itemSection').addClass("close");
+        $('#orderSection').addClass("close");
+        $('#dashboardSection').addClass("open");
+        console.log("clickedStudent");
+
+    })
+    $('#nav-customers').on('click',()=>{
+        $('#customerSection').removeClass("close");
+        $('#customerSection').addClass("open");
+        $('#itemSection').addClass("close");
+        $('#orderSection').addClass("close");
+        $('#dashboardSection').addClass("close");
+        console.log("clickedCourse");
+    });
+    $('#nav-inventory').on('click',()=>{
+        $('#itemSection').removeClass("close");
+        $('#customerSection').addClass("close");
+        $('#itemSection').addClass("open");
+        $('#orderSection').addClass("close");
+        $('#dashboardSection').addClass("close");
+        console.log("clickedCourse");
+    });
+    $('#nav-orders').on('click',()=>{
+        $('#orderSection').removeClass("close");
+        $('#customerSection').addClass("close");
+        $('#itemSection').addClass("close");
+        $('#orderSection').addClass("open");
+        $('#dashboardSection').addClass("close");
+        console.log("clickedCourse");
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
