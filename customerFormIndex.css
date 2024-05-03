@@ -3,12 +3,7 @@
 
 
 @media all and (max-width: 320px ){
-    body {
 
-        position: relative;
-        height: 1800px;
-        width: 100%;
-    }
 
     .container-fluid {
         background-color: #365486;
@@ -19,7 +14,7 @@
         z-index: 9999;
     }
 
-    #addCustomerDiv {
+    #addCustomerDiv{
         top: 100px;
         position: absolute;
         background-color: #7FC7D9;
@@ -211,12 +206,6 @@
     }
 }
 @media all and (min-width: 321px ) and (max-width: 460px){
-    body {
-
-        position: relative;
-        height: 1800px;
-        width: 100%;
-    }
 
     .container-fluid {
         background-color: #365486;
@@ -425,12 +414,7 @@
     }
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
-    body {
 
-        position: relative;
-        height: 1600px;
-        width: 100%;
-    }
 
     .container-fluid {
         background-color: #365486;
@@ -646,12 +630,7 @@
     }
 }
 @media all and (min-width: 769px ) and (max-width: 834px){
-    body {
 
-        position: relative;
-        height: 1400px;
-        width: 100%;
-    }
 
     .container-fluid {
         background-color: #365486;
@@ -861,12 +840,7 @@
     }
 }
 @media all and (min-width: 835px ) and (max-width: 1024px){
-    body{
 
-        position: relative;
-        height: 1500px;
-        width: 100%;
-    }
     .container-fluid{
         background-color: #365486;
     }
@@ -1065,12 +1039,7 @@
 
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
-    body{
-        overflow-x: hidden;
-        position: relative;
-        height: 1500px;
-        width: 100vw;
-    }
+
     .container-fluid{
         background-color: #365486;
     }
@@ -1268,12 +1237,7 @@
     }
 }
 @media all and  (min-width:1440px){
-    body{
-        overflow-x: hidden;
-        position: relative;
-        height: 1500px;
-        width: 100vw;
-    }
+
     .container-fluid{
         background-color: #365486;
     }

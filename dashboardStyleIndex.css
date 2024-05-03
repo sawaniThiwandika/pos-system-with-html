@@ -1,137 +1,148 @@
 
 
-
-
 @media all and (max-width: 320px ){
-    body {
 
-        position: relative;
-        height: 1800px;
-        width: 100%;
-    }
+    .container-fluid{
 
-    .container-fluid {
         background-color: #365486;
     }
 
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
-
-    #addCustomerDiv {
-        top: 100px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 650px;
+    #totalCustomer{
         left: 0;
         right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-
-    #addCustomerDiv > form {
         position: absolute;
+        margin: auto;
         width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-
-    #updateCustomerDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteCustomerDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveCustomerDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #customerList {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 900px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
+        height: 80px;
+        background-color:white ;
+        top: 100px;
         border-radius: 10px;
 
     }
-    #cusTableDiv{
+
+    #totalOrder{
         position: absolute;
+        top:200px;
         left: 0;
         right: 0;
-        top: 80px;
+        width: 90%;
+        height: 80px;
         margin: auto;
-        width: 98%;
-        height: 470px;
-        overflow: auto;
+        background-color:white ;
+        border-radius: 10px;
     }
-
-    #customerList>h3{
+    #totalItem{
+        position: absolute;
+        top: 300px;
+        width: 90%;
+        height: 80px;
+        left: 0;
+        right: 0;
+        background-color:white ;
+        margin: auto;
+        border-radius: 10px;
+    }
+    #labels{
+        position: relative;
+    }
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 50%;
-        height: 35px;
-        border: none;
-        right: 50px;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        left: 40px;
+        top: 20px;
         margin: auto;
 
+    }
+    #dateDiv{
+        position: absolute;
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        right:0;
+        left: 0;
+        top:10px;
+        border-radius: 10px;
+        margin: auto;
 
     }
-
-    #more {
-        position: absolute;
-        left: 0;
+    #date{
+        width: fit-content;
+        top: 0;
         right: 0;
+        left: 0;
         bottom: 0;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
+        position: absolute;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
+
+        right: 30px;
+        top: 20px;
+        bottom: 50px;
+        margin: auto;
 
     }
 
-    #customerList>div> table {
+    #orderChartDiv {
         position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
         left: 0;
         right: 0;
-        top: 0;
+        top: 1500px;
+        border-radius: 20px;
         margin: auto;
+    }
+
+    #itemChartDiv {
+        position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
+        left:0;
+        right: 0;
+        top: 1000px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
         width: 100%;
+        height: 400px;
+        right: 0;
+        left: 20px;
+        top: 500px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
+        border: solid white;
+        background-color: white;
+        width: 90%;
+        height: 33.33%;
+        right: 0;
+        left: 20px;
+        margin: 10px;
+
+        border-radius: 10px;
 
     }
 
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
     footer {
         position: absolute;
@@ -182,8 +193,7 @@
         height: 30px;
         bottom: 40px;
     }
-
-    #copy {
+    #copy{
         position: absolute;
         bottom: 0;
         margin: auto;
@@ -191,15 +201,13 @@
         right: 0;
         font-size: 10px;
     }
-
-    #contact {
+    #contact{
         position: absolute;
-        top: 10px;
+        top:10px;
         width: fit-content;
 
     }
-
-    footer > div > img {
+    footer > div >img{
 
         position: absolute;
         right: 150px;
@@ -209,143 +217,151 @@
         left: 10px;
         width: 80px;
     }
+
 }
 @media all and (min-width: 321px ) and (max-width: 460px){
-    body {
 
-        position: relative;
-        height: 1800px;
-        width: 100%;
-    }
+    .container-fluid{
 
-    .container-fluid {
         background-color: #365486;
     }
 
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
-
-    #addCustomerDiv {
-        top: 100px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 650px;
+    #totalCustomer{
         left: 0;
         right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-
-    #addCustomerDiv > form {
         position: absolute;
+        margin: auto;
         width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-
-    #updateCustomerDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteCustomerDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveCustomerDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #resetCustomerDiv{
-        position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #customerList {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 900px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
+        height: 80px;
+        background-color:white ;
+        top: 100px;
         border-radius: 10px;
 
     }
-    #cusTableDiv{
+
+    #totalOrder{
         position: absolute;
+        top:200px;
         left: 0;
         right: 0;
-        top: 80px;
+        width: 90%;
+        height: 80px;
         margin: auto;
-        width: 98%;
-        height: 470px;
-        overflow: auto;
+        background-color:white ;
+        border-radius: 10px;
     }
-    #customerList>h3{
+    #totalItem{
+        position: absolute;
+        top: 300px;
+        width: 90%;
+        height: 80px;
+        left: 0;
+        right: 0;
+        background-color:white ;
+        margin: auto;
+        border-radius: 10px;
+    }
+    #labels{
+        position: relative;
+    }
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 50%;
-        height: 35px;
-        border: none;
-        right: 50px;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        left: 40px;
+        top: 20px;
         margin: auto;
 
+    }
+    #dateDiv{
+        position: absolute;
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        right:0;
+        left: 0;
+        top:10px;
+        border-radius: 10px;
+        margin: auto;
 
     }
-
-    #more {
-        position: absolute;
-        left: 0;
+    #date{
+        width: fit-content;
+        top: 0;
         right: 0;
+        left: 0;
         bottom: 0;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
+        position: absolute;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
+
+        right:50px;
+        top: 20px;
+        bottom: 50px;
+        margin: auto;
 
     }
 
-    #customerList>div> table {
+    #orderChartDiv {
         position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top: 1500px;
+        border-radius: 20px;
         margin: auto;
+    }
+
+    #itemChartDiv {
+        position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
+        left:0;
+        right: 0;
+        top: 1000px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
         width: 100%;
+        height: 400px;
+        right: 0;
+        left: 20px;
+        top: 500px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
+        border: solid white;
+        background-color: white;
+        width: 90%;
+        height: 33.33%;
+        right: 0;
+        left: 20px;
+        margin: 10px;
+
+        border-radius: 10px;
 
     }
 
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
     footer {
         position: absolute;
@@ -396,8 +412,7 @@
         height: 30px;
         bottom: 40px;
     }
-
-    #copy {
+    #copy{
         position: absolute;
         bottom: 0;
         margin: auto;
@@ -405,15 +420,13 @@
         right: 0;
         font-size: 10px;
     }
-
-    #contact {
+    #contact{
         position: absolute;
-        top: 10px;
+        top:10px;
         width: fit-content;
 
     }
-
-    footer > div > img {
+    footer > div >img{
 
         position: absolute;
         right: 150px;
@@ -425,141 +438,179 @@
     }
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
-    body {
 
-        position: relative;
-        height: 1600px;
-        width: 100%;
-    }
+    .container-fluid{
 
-    .container-fluid {
         background-color: #365486;
     }
+    /* #totalCustomer{
+         left: 10px;
+         position: absolute;
+         margin: auto;
+         width: 15%;
+         aspect-ratio: 4/3;
+         background-color:white ;
+         top: 20px;
+         border-radius: 20px;
 
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
+     }
 
-    #addCustomerDiv {
-        top: 100px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 650px;
+     #totalOrder{
+         position: absolute;
+         top:20px;
+         left: 20%;
+         width: 15%;
+         aspect-ratio: 4/3;
+         margin: auto;
+         background-color:white ;
+         border-radius: 20px;
+     }
+     #totalItem{
+         position: absolute;
+         top: 20px;
+         width: 15%;
+         aspect-ratio: 4/3;
+         left: 40%;
+         background-color:white ;
+         margin: auto;
+         border-radius: 20px;
+     }*/
+    #totalCustomer{
         left: 0;
         right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-
-    #addCustomerDiv > form {
         position: absolute;
+        margin: auto;
         width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-
-    #updateCustomerDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteCustomerDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveCustomerDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #resetCustomerDiv{
-        position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #customerList {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 800px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
+        height: 80px;
+        background-color:white ;
+        top: 100px;
         border-radius: 10px;
 
     }
-    #cusTableDiv{
+
+    #totalOrder{
         position: absolute;
+        top:200px;
         left: 0;
         right: 0;
-        top: 120px;
+        width: 90%;
+        height: 80px;
         margin: auto;
-        width: 98%;
-        height: 470px;
-        overflow: auto;
+        background-color:white ;
+        border-radius: 10px;
     }
-    #customerList>h3{
+    #totalItem{
+        position: absolute;
+        top: 300px;
+        width: 90%;
+        height: 80px;
+        left: 0;
+        right: 0;
+        background-color:white ;
+        margin: auto;
+        border-radius: 10px;
+    }
+    #labels{
+        position: relative;
+    }
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 50%;
-        height: 35px;
-        border: none;
-        right: 50px;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        left: 40px;
+        top: 20px;
         margin: auto;
 
+    }
+    #dateDiv{
+        position: absolute;
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        right:0;
+        left: 0;
+        top:10px;
+        border-radius: 10px;
+        margin: auto;
 
     }
-
-    #more {
-        position: absolute;
-        left: 0;
+    #date{
+        width: fit-content;
+        top: 0;
         right: 0;
+        left: 0;
         bottom: 0;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
+        position: absolute;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
+
+        right: 150px;
+        top: 20px;
+        bottom: 50px;
+        margin: auto;
 
     }
 
-    #customerList > table {
+    #orderChartDiv {
         position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
         left: 0;
         right: 0;
-        top: 0;
+        top: 1500px;
+        border-radius: 20px;
         margin: auto;
-        width: 100%;
-      /*  height: 75%;*/
     }
 
+    #itemChartDiv {
+        position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
+        left:0;
+        right: 0;
+        top: 1000px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        right: 0;
+        left: 20px;
+        top: 500px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
+        border: solid white;
+        background-color: white;
+        width: 90%;
+        height: 33.33%;
+        right: 0;
+        left: 20px;
+        margin: 10px;
+
+        border-radius: 10px;
+
+    }
+
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
     footer {
         position: absolute;
@@ -595,13 +646,6 @@
         height: 30px;
         margin: auto;
     }
-    #resetItemDiv{
-        position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
 
     #emailDiv {
         position: absolute;
@@ -617,8 +661,7 @@
         height: 30px;
         bottom: 40px;
     }
-
-    #copy {
+    #copy{
         position: absolute;
         bottom: 0;
         margin: auto;
@@ -626,15 +669,13 @@
         right: 0;
         font-size: 10px;
     }
-
-    #contact {
+    #contact{
         position: absolute;
-        top: 10px;
+        top:10px;
         width: fit-content;
 
     }
-
-    footer > div > img {
+    footer > div >img{
 
         position: absolute;
         right: 150px;
@@ -642,146 +683,183 @@
     footer>img{
         position: absolute;
         left: 10px;
-        width: 120px;
+        width: 100px;
     }
 }
 @media all and (min-width: 769px ) and (max-width: 834px){
-    body {
 
-        position: relative;
-        height: 1400px;
-        width: 100%;
-    }
+    .container-fluid{
 
-    .container-fluid {
         background-color: #365486;
     }
+    /* #totalCustomer{
+         left: 10px;
+         position: absolute;
+         margin: auto;
+         width: 15%;
+         aspect-ratio: 4/3;
+         background-color:white ;
+         top: 20px;
+         border-radius: 20px;
 
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
+     }
 
-    #addCustomerDiv {
-        top: 100px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 400px;
+     #totalOrder{
+         position: absolute;
+         top:20px;
+         left: 20%;
+         width: 15%;
+         aspect-ratio: 4/3;
+         margin: auto;
+         background-color:white ;
+         border-radius: 20px;
+     }
+     #totalItem{
+         position: absolute;
+         top: 20px;
+         width: 15%;
+         aspect-ratio: 4/3;
+         left: 40%;
+         background-color:white ;
+         margin: auto;
+         border-radius: 20px;
+     }*/
+    #totalCustomer{
         left: 0;
         right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-
-    #addCustomerDiv > form {
         position: absolute;
+        margin: auto;
         width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-
-    #updateCustomerDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteCustomerDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveCustomerDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #customerList {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 600px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
+        height: 80px;
+        background-color:white ;
+        top: 100px;
         border-radius: 10px;
 
     }
-    #resetCustomerDiv{
+
+    #totalOrder{
         position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #cusTableDiv{
-        position: absolute;
+        top:200px;
         left: 0;
         right: 0;
-        top: 120px;
+        width: 90%;
+        height: 80px;
         margin: auto;
-        width: 98%;
-        height: 470px;
-        overflow: auto;
+        background-color:white ;
+        border-radius: 10px;
     }
-    #customerList>h3{
+    #totalItem{
+        position: absolute;
+        top: 300px;
+        width: 90%;
+        height: 80px;
+        left: 0;
+        right: 0;
+        background-color:white ;
+        margin: auto;
+        border-radius: 10px;
+    }
+    #labels{
+        position: relative;
+    }
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 30%;
-        height:35px;
-        border: none;
-        left: 0;
-        right: 0;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        left: 40px;
+        top: 20px;
         margin: auto;
 
+    }
+    #dateDiv{
+        position: absolute;
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        right:0;
+        left: 0;
+        top:10px;
+        border-radius: 10px;
+        margin: auto;
 
     }
-
-    #more {
-        position: absolute;
-        left: 0;
+    #date{
+        width: fit-content;
+        top: 0;
         right: 0;
+        left: 0;
         bottom: 0;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
+        position: absolute;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
+
+        right: 150px;
+        top: 20px;
+        bottom: 50px;
+        margin: auto;
 
     }
 
-    #customerList >div> table {
+    #orderChartDiv {
         position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
         left: 0;
         right: 0;
-        top: 0;
+        top: 1500px;
+        border-radius: 20px;
         margin: auto;
-        width: 100%;
-       /* height: 75%;*/
     }
 
+    #itemChartDiv {
+        position: absolute;
+        width: 90%;
+        height: 440px;
+        background-color: white;
+        left:0;
+        right: 0;
+        top: 1000px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        right: 0;
+        left: 20px;
+        top: 500px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
+        border: solid white;
+        background-color: white;
+        width: 90%;
+        height: 33.33%;
+        right: 0;
+        left: 20px;
+        margin: 10px;
+
+        border-radius: 10px;
+
+    }
+
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
     footer {
         position: absolute;
@@ -832,8 +910,7 @@
         height: 30px;
         bottom: 40px;
     }
-
-    #copy {
+    #copy{
         position: absolute;
         bottom: 0;
         margin: auto;
@@ -841,15 +918,13 @@
         right: 0;
         font-size: 10px;
     }
-
-    #contact {
+    #contact{
         position: absolute;
-        top: 10px;
+        top:10px;
         width: fit-content;
 
     }
-
-    footer > div > img {
+    footer > div >img{
 
         position: absolute;
         right: 150px;
@@ -857,139 +932,133 @@
     footer>img{
         position: absolute;
         left: 10px;
-        width: 120px;
+        width: 100px;
     }
 }
 @media all and (min-width: 835px ) and (max-width: 1024px){
-    body{
 
-        position: relative;
-        height: 1500px;
-        width: 100%;
-    }
     .container-fluid{
+
         background-color: #365486;
     }
-    nav {
+    #totalCustomer{
+        left: 10px;
+        position: absolute;
+        margin: auto;
+        width: 17%;
+        aspect-ratio: 4/3;
+        background-color:white ;
+        top: 20px;
+        border-radius: 20px;
+
+    }
+
+    #totalOrder{
+        position: absolute;
+        top:20px;
+        left: 20%;
+        width: 17%;
+        aspect-ratio: 4/3;
+        margin: auto;
+        background-color:white ;
+        border-radius: 20px;
+    }
+    #totalItem{
+        position: absolute;
+        top: 20px;
+        width: 17%;
+        aspect-ratio: 4/3;
+        left: 40%;
+        background-color:white ;
+        margin: auto;
+        border-radius: 20px;
+    }
+    #labels{
         position: relative;
-        z-index: 9999;
     }
-    #addCustomerDiv{
-        top: 100px;
-        position: absolute;
-        background-color:#7FC7D9;
-        width: 98%;
-        height: 350px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addCustomerDiv>form{
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-    #updateCustomerDiv{
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #deleteCustomerDiv{
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #saveCustomerDiv{
-        position: absolute;
-        left:20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #customerList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 550px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #customerList>h3{
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-    #cusTableDiv{
-        position: absolute;
         left: 0;
         right: 0;
-        top: 120px;
+        top: 10px;
         margin: auto;
-        width: 98%;
-        height: 470px;
-        overflow: auto;
+
+    }
+    #dateDiv{
+        position: absolute;
+        width: 35%;
+        height: 170px;
+        background-color: white;
+        right: 20px;
+        top:20px;
+        border-radius: 20px;
+        margin: auto;
     }
 
-    #searchBarCustomers{
-
+    #labels > div > h1 {
         position: absolute;
-        width: 30%;
-        height: 40px;
-        border: none;
+        width: fit-content;
         left: 0;
         right: 0;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        bottom: 50px;
         margin: auto;
 
+    }
 
-    }
-    #resetCustomerDiv{
+    #orderChartDiv {
         position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 20px;
+        top: 300px;
+        border-radius: 20px;
         margin: auto;
     }
-    #more{
+
+    #itemChartDiv {
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 40%;
+        top: 300px;
+        border-radius: 20px;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
+    }
+
+    #buttonDiv {
+        position: absolute;
+        width: 20%;
+        height: 400px;
+        right: 2%;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
         border: solid white;
-
-    }
-    #customerList>div>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-       /* bottom: 30px;*/
-        margin: auto;
+        background-color: white;
         width: 100%;
-       /* height: 75%;*/
+        height: 33.33%;
+
+        border-radius: 10px;
+
     }
 
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 
-    footer{
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    footer {
         position: absolute;
         text-align: center;
         font-family: "Times New Roman";
@@ -1060,140 +1129,133 @@
     footer>img{
         position: absolute;
         left: 10px;
-        width: 120px;
+        width: 100px;
     }
-
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
-    body{
-        overflow-x: hidden;
-        position: relative;
-        height: 1500px;
-        width: 100vw;
-    }
+
     .container-fluid{
+
         background-color: #365486;
     }
-    nav {
+    #totalCustomer{
+        left: 10px;
+        position: absolute;
+        margin: auto;
+        width: 15%;
+        aspect-ratio: 4/3;
+        background-color:white ;
+        top: 20px;
+        border-radius: 20px;
+
+    }
+
+    #totalOrder{
+        position: absolute;
+        top:20px;
+        left: 20%;
+        width: 15%;
+        aspect-ratio: 4/3;
+        margin: auto;
+        background-color:white ;
+        border-radius: 20px;
+    }
+    #totalItem{
+        position: absolute;
+        top: 20px;
+        width: 15%;
+        aspect-ratio: 4/3;
+        left: 40%;
+        background-color:white ;
+        margin: auto;
+        border-radius: 20px;
+    }
+    #labels{
         position: relative;
-        z-index: 9999;
     }
-    #addCustomerDiv{
-        top: 100px;
-        position: absolute;
-        background-color:#7FC7D9;
-        width: 98%;
-        height: 350px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addCustomerDiv>form{
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-    #updateCustomerDiv{
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #deleteCustomerDiv{
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #saveCustomerDiv{
-        position: absolute;
-        left:20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #resetCustomerDiv{
-        position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #customerList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 550px;
-        width: 98%;
-        margin: auto;
-        height: 700px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #cusTableDiv{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 120px;
-        margin: auto;
-        width: 98%;
-        height: 520px;
-        overflow: auto;
-    }
-    #customerList>h3{
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 30%;
-        height: 40px;
-        border: none;
         left: 0;
         right: 0;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        top: 10px;
         margin: auto;
-
 
     }
-    #more{
+    #dateDiv{
         position: absolute;
+        width: 35%;
+        height: 170px;
+        background-color: white;
+        right: 20px;
+        top:20px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 50px;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
+
+    }
+
+    #orderChartDiv {
+        position: absolute;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 20px;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #itemChartDiv {
+        position: absolute;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 40%;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
+        width: 20%;
+        height: 400px;
+        right: 2%;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
         border: solid white;
-
-    }
-    #customerList>div>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        /*bottom: 30px;*/
-        margin: auto;
+        background-color: white;
         width: 100%;
-   /*     height: 600px;*/
+        height: 33.33%;
+
+        border-radius: 10px;
+
     }
 
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 
-    footer{
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    footer {
         position: absolute;
         text-align: center;
         font-family: "Times New Roman";
@@ -1264,139 +1326,133 @@
     footer>img{
         position: absolute;
         left: 10px;
-        width: 120px;
+        width: 100px;
     }
 }
 @media all and  (min-width:1440px){
-    body{
-        overflow-x: hidden;
-        position: relative;
-        height: 1500px;
-        width: 100vw;
-    }
+
     .container-fluid{
+
         background-color: #365486;
     }
-    nav {
+    #totalCustomer{
+        left: 10px;
+        position: absolute;
+        margin: auto;
+        width: 15%;
+        aspect-ratio: 4/3;
+        background-color:white ;
+        top: 20px;
+        border-radius: 20px;
+
+    }
+
+    #totalOrder{
+        position: absolute;
+        top:20px;
+        left: 20%;
+        width: 15%;
+        aspect-ratio: 4/3;
+        margin: auto;
+        background-color:white ;
+        border-radius: 20px;
+    }
+    #totalItem{
+        position: absolute;
+        top: 20px;
+        width: 15%;
+        aspect-ratio: 4/3;
+        left: 40%;
+        background-color:white ;
+        margin: auto;
+        border-radius: 20px;
+    }
+    #labels{
         position: relative;
-        z-index: 9999;
     }
-    #addCustomerDiv{
-        top: 120px;
-        position: absolute;
-        background-color:#7FC7D9;
-        width: 98%;
-        height: 350px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addCustomerDiv>form{
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        margin: 20px;
-
-    }
-    #updateCustomerDiv{
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #deleteCustomerDiv{
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #saveCustomerDiv{
-        position: absolute;
-        left:20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #resetCustomerDiv{
-        position: absolute;
-        left:300px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #customerList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 550px;
-        width: 100%;
-        margin: auto;
-        height: 720px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #cusTableDiv{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 120px;
-        margin: auto;
-        width: 98%;
-        height: 550px;
-        overflow: auto;
-    }
-    #customerList>h3{
+    #labels>div>h4{
         position: absolute;
         width: fit-content;
-        margin: 20px;
-    }
-
-    #searchBarCustomers{
-
-        position: absolute;
-        width: 30%;
-        height: 40px;
-        border: none;
         left: 0;
         right: 0;
-        top: 50px;
-        border-radius: 12px;
-        text-align: justify;
+        top: 10px;
         margin: auto;
-
 
     }
-    #more{
+    #dateDiv{
         position: absolute;
+        width: 35%;
+        height: 170px;
+        background-color: white;
+        right: 20px;
+        top:20px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #labels > div > h1 {
+        position: absolute;
+        width: fit-content;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 50px;
         margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
+
+    }
+
+    #orderChartDiv {
+        position: absolute;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 20px;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #itemChartDiv {
+        position: absolute;
+        width: 35%;
+        height: 440px;
+        background-color: white;
+        left: 40%;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv {
+        position: absolute;
+        width: 20%;
+        height: 400px;
+        right: 2%;
+        top: 300px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    #buttonDiv > button {
         border: solid white;
+        background-color: white;
+        width: 100%;
+        height: 33.33%;
 
-    }
-    #customerList>#cusTableDiv>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 98%;
-        height: 550px;
         border-radius: 10px;
+
     }
 
+    #newCus {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
 
-    footer{
+    #newOrder {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    footer {
         position: absolute;
         text-align: center;
         font-family: "Times New Roman";
@@ -1467,6 +1523,10 @@
     footer>img{
         position: absolute;
         left: 10px;
-        width: 120px;
+        width: 100px;
     }
 }
+
+
+
+

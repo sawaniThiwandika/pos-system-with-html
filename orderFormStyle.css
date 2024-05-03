@@ -162,7 +162,7 @@
            top:100px;
 
        }*/
-    #saveDiv{
+    #selectCusBtnDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -171,7 +171,7 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+    #selectBtnCustomerDiv>button{
         width: 80%;
         left: 0;
         right: 0;
@@ -504,7 +504,7 @@
            top:100px;
 
        }*/
-    #saveDiv{
+    #selectCusBtnDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -513,7 +513,7 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+    #selectCusBtnDiv>button{
         width: 80%;
         left: 0;
         right: 0;
@@ -846,7 +846,7 @@
            top:100px;
 
        }*/
-    #saveDiv{
+    /*#saveItemDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -855,13 +855,26 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+    #saveItemDiv>button{
         width: 80%;
         left: 0;
         right: 0;
         margin: auto;
         position: absolute;
         bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
+    }*/
+    #selectCusBtnDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #selectCusBtnDiv>button{
+        width: 90%;
         background-color: #00B332;
         border-color:#00B332;
     }
@@ -1187,7 +1200,22 @@
         top:50px;
 
     }
-    #saveDiv{
+
+    #selectCusBtnDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #selectCusBtnDiv>button{
+        width: 90%;
+        background-color: #00B332;
+        border-color:#00B332;
+    }
+
+    /*#saveItemDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -1196,7 +1224,7 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+    #saveItemDiv>button{
         width: 80%;
         left: 0;
         right: 0;
@@ -1205,7 +1233,7 @@
         bottom: 10px;
         background-color: #00B332;
         border-color:#00B332;
-    }
+    }*/
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
         right: 0;
@@ -1492,6 +1520,25 @@
         background-color: #7FC7D9;
         border-radius: 10px;
     }
+    #selectCusBtnDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }
+    #selectCusBtnDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
+    }
     #cartTable{
         width: 95%;
         height: 450px;
@@ -1523,7 +1570,7 @@
         top:50px;
 
     }
-    #saveDiv{
+  /*#saveItemDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -1532,7 +1579,7 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+  #saveItemDiv>button{
         width: 80%;
         left: 0;
         right: 0;
@@ -1541,7 +1588,7 @@
         bottom: 10px;
         background-color: #00B332;
         border-color:#00B332;
-    }
+    }*/
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
         right: 0;
@@ -1857,7 +1904,7 @@
         top:50px;
 
     }
-    #saveDiv{
+    #selectCusBtnDiv{
         position: absolute;
         left:0;
         right: 0;
@@ -1866,7 +1913,7 @@
         width: 100%;
 
     }
-    #saveDiv>button{
+    #selectCusBtnDiv>button{
         width: 80%;
         left: 0;
         right: 0;
@@ -1875,7 +1922,25 @@
         bottom: 10px;
         background-color: #00B332;
         border-color:#00B332;
-    }
+    } /* #saveItemDiv{
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom: 10px;
+        margin: auto;
+        width: 100%;
+
+    }*/
+  /*  #saveItemDiv>button{
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        bottom: 10px;
+        background-color: #00B332;
+        border-color:#00B332;
+    }*/
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
         right: 0;
@@ -1891,6 +1956,14 @@
         right: 0;
         margin: auto;
         top:50px;
+
+    }
+    #selectCusBtnDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
 
     }
 
@@ -2192,19 +2265,20 @@
         bottom: 150px;
 
     }
-    #saveDiv{
+ /*   #saveItemDiv{
         position: absolute;
         left:20px;
         right: 0;
         bottom: 20px;
         margin: auto;
 
-    }
-    #saveDiv>button{
+    }*/
+    #selectCusBtnDiv>button{
         width: 90%;
         background-color:#00B332;
         border-color:#00B332;
     }
+
     #addOrderDiv>#selectCusDiv>h3{
         left: 0;
         right: 0;
@@ -2224,6 +2298,14 @@
 
     }
     #addToCartDiv{
+        position: absolute;
+        left:20px;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+
+    }
+    #selectCusBtnDiv{
         position: absolute;
         left:20px;
         right: 0;

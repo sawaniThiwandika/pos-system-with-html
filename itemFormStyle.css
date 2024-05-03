@@ -916,7 +916,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 500px;
         position: absolute;
         background-color: #7FC7D9;
@@ -928,14 +928,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -944,7 +944,7 @@
         margin: 20px;
 
     }
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 80px;
         right: 0;
@@ -952,7 +952,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 175px;
         right: 0;
@@ -960,14 +960,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 5px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:270px;
         right: 0;
@@ -1227,7 +1227,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 500px;
         position: absolute;
         background-color: #7FC7D9;
@@ -1239,14 +1239,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -1256,7 +1256,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 80px;
         right: 0;
@@ -1264,7 +1264,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 175px;
         right: 0;
@@ -1272,14 +1272,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 5px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:270px;
         right: 0;
@@ -1537,7 +1537,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 500px;
         position: absolute;
         background-color: #7FC7D9;
@@ -1549,14 +1549,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -1566,7 +1566,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 100px;
         right: 0;
@@ -1574,7 +1574,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 200px;
         right: 0;
@@ -1582,14 +1582,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 20px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:300px;
         right: 0;
@@ -1849,7 +1849,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 500px;
         position: absolute;
         background-color: #7FC7D9;
@@ -1861,14 +1861,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -1878,7 +1878,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 100px;
         right: 0;
@@ -1886,7 +1886,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 200px;
         right: 0;
@@ -1894,14 +1894,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 20px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:300px;
         right: 0;
@@ -2156,7 +2156,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 450px;
         position: absolute;
         background-color: #7FC7D9;
@@ -2168,14 +2168,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -2185,7 +2185,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 100px;
         right: 0;
@@ -2193,7 +2193,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 200px;
         right: 0;
@@ -2201,14 +2201,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 20px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:300px;
         right: 0;
@@ -2464,7 +2464,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 450px;
         position: absolute;
         background-color: #7FC7D9;
@@ -2476,14 +2476,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -2493,7 +2493,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 100px;
         right: 0;
@@ -2501,7 +2501,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 200px;
         right: 0;
@@ -2509,14 +2509,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 20px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:300px;
         right: 0;
@@ -2772,7 +2772,7 @@
         color: #0047FC;
     }
 
-    #addDiv {
+    #addItemDiv {
         top: 450px;
         position: absolute;
         background-color: #7FC7D9;
@@ -2784,14 +2784,14 @@
         border-radius: 10px;
 
     }
-    #addDiv>h3{
+    #addItemDiv>h3{
         position: absolute;
         left: 20px;
         top:20px;
         margin: auto;
     }
 
-    #addDiv > form {
+    #addItemDiv > form {
         position: absolute;
         width: 90%;
         left: 0;
@@ -2801,7 +2801,7 @@
 
     }
 
-    #updateDiv {
+    #updateItemDiv {
         position: absolute;
         left: 100px;
         right: 0;
@@ -2809,7 +2809,7 @@
         margin: auto;
     }
 
-    #deleteDiv {
+    #deleteItemDiv {
         position: absolute;
         left: 200px;
         right: 0;
@@ -2817,14 +2817,14 @@
         margin: auto;
     }
 
-    #saveDiv {
+    #saveItemDiv {
         position: absolute;
         left: 20px;
         right: 0;
         bottom: -75px;
         margin: auto;
     }
-    #resetDiv{
+    #resetItemDiv{
         position: absolute;
         left:300px;
         right: 0;
