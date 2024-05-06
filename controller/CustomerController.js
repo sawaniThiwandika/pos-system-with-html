@@ -1,6 +1,6 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {customersList} from "../db/db.js";
-
+let clickRecord;
 $('#nav-dashboard').on('click',()=>{
     $('#dashboardSection').removeClass("close");
     $('#customerSection').addClass("close");
@@ -64,6 +64,7 @@ $('#updateCusBtn').on('click',(event)=>{
     customer.cusContact=cusContact;
 
     console.log(customer.cusName);
+    loadTable();
 
 });
 $('#resetCusBtn').on('click',(event)=>{
@@ -90,4 +91,21 @@ function loadTable() {
         $('#customerTable').append(record);
     });
 }
+
+$('#cusTableBody').on('click','tr',function () {
+    let index = $(this).index();
+    clickRecord = index;
+    let cusId = $(this).find(".colCustomerId").text();
+    let cusName = $(this).find(".colCustomerName").text();
+    let cusAddress = $(this).find(".colCustomerAddress").text();
+    let cusEmail = $(this).find(".colCustomerEmail").text();
+    let cusContact = $(this).find(".colCustomerContact").text();
+    console.log("clicked row " + index);
+    $('#customerIdField').val(cusId);
+    $('#customerNameField').val(cusName);
+    $('#customerEmailField').val(cusEmail);
+    $('#customerAddressField').val(cusAddress);
+    $('#customerContactField').val(cusContact);
+});
+
 loadTable();
