@@ -44,3 +44,30 @@ event.preventDefault();
     console.log(customer.cusName);
 
 });
+$('#updateCusBtn').on('click',(event)=>{
+    event.preventDefault();
+    let cusId=$('#customerIdField').val();
+    let cusName=$('#customerNameField').val();
+    let cusEmail=$('#customerEmailField').val();
+    let cusAddress=$('#customerAddressField').val();
+    let cusContact=$('#customerContactField').val();
+
+    customer.cusName=cusId;
+    customer.cusName=cusName;
+    customer.cusEmail=cusEmail;
+    customer.cusAddress=cusAddress;
+    customer.cusContact=cusContact;
+
+    console.log(customer.cusName);
+
+});
+$('#resetCusBtn').on('click',(event)=>{
+    event.preventDefault();
+    $('#customerIdField').val("");
+    $('#customerNameField').val("");
+    $('#customerEmailField').val("");
+    $('#customerAddressField').val("");
+    $('#customerContactField').val("");
+    console.log("reset customer details");
+
+});
