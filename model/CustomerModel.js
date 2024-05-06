@@ -1,14 +1,24 @@
 export class CustomerModel{
-    constructor(cusId,cusName,cusEmail,cusAddress,cusContact) {
+    constructor(cusId,cusName,cusEmail,cusAddress,cusContact,addCusDate) {
 
         this._cusId = cusId;
         this._cusName = cusName;
         this._cusEmail = cusEmail;
         this._cusAddress = cusAddress;
         this._cusContact = cusContact;
+        this._addCustomerDate=addCusDate;
+        this._addCusDate = addCusDate;
 
     }
 
+
+    get addCusDate() {
+        return this._addCusDate;
+    }
+
+    set addCusDate(value) {
+        this._addCusDate = value;
+    }
 
     get cusId() {
         return this._cusId;

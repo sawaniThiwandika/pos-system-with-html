@@ -1,4 +1,6 @@
 import {CustomerModel} from "../model/CustomerModel.js";
+import {customersList} from "../db/db.js";
+
 $('#nav-dashboard').on('click',()=>{
     $('#dashboardSection').removeClass("close");
     $('#customerSection').addClass("close");
@@ -40,8 +42,11 @@ event.preventDefault();
     let cusEmail=$('#customerEmailField').val();
     let cusAddress=$('#customerAddressField').val();
     let cusContact=$('#customerContactField').val();
-    customer=new CustomerModel(cusId,cusName,cusEmail,cusAddress,cusContact);
+    let cusAddDate= new Date().toISOString().split('T')[0];
+    customer=new CustomerModel(cusId,cusName,cusEmail,cusAddress,cusContact,cusAddDate);
+    customersList.push(customer);
     console.log(customer.cusName);
+    loadTable();
 
 });
 $('#updateCusBtn').on('click',(event)=>{
@@ -71,3 +76,18 @@ $('#resetCusBtn').on('click',(event)=>{
     console.log("reset customer details");
 
 });
+function loadTable() {
+    $('#cusTableBody').empty();
+    customersList.map((item, index) => {
+        var record = `<tr>
+         <td  class="colCustomerId" >${item._cusId}</td>
+            <td class="colCustomerName">${item.cusName}</td>
+            <td class="colCustomerAddress">${item._cusAddress}</td>
+            <td class="colCustomerEmail">${item._cusEmail}</td>
+            <td class="colCustomerContact">${item._cusContact}</td>
+            <td class="colCustomerAddDate">${item._addCusDate}</td>
+        </tr>`;
+        $('#customerTable').append(record);
+    });
+}
+loadTable();

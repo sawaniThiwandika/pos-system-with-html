@@ -168,19 +168,19 @@
         <h3> Customer List</h3>
         <input type="text" placeholder="Search Here" id="searchBarCustomers">
         <div id="cusTableDiv">
-            <table class="table">
+            <table class="table" id="customerTable">
                 <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Contact</th>
-                    <th scope="col">Date</th>
+                    <th scope="col" id="colCusId">ID</th>
+                    <th scope="col" id="colCusName">Name</th>
+                    <th scope="col" id="colCusAddress">Address</th>
+                    <th scope="col" id="colCusEmail">Email</th>
+                    <th scope="col" id="colCusContact">Contact</th>
+                    <th scope="col" id="colCusDate">Date</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
+                <tbody id="cusTableBody">
+                <!--<tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
@@ -244,7 +244,7 @@
                     <td>@twitter</td>
                     <td>Thornton</td>
                     <td>@fat</td>
-                </tr>
+                </tr>-->
 
                 </tbody>
             </table>
