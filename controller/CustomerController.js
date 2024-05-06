@@ -107,5 +107,10 @@ $('#cusTableBody').on('click','tr',function () {
     $('#customerAddressField').val(cusAddress);
     $('#customerContactField').val(cusContact);
 });
+$('#deleteCusBtn').on('click',(event)=>{
+    event.preventDefault();
+    customersList.splice(clickRecord, 1);
+    loadTable();
+});
 
 loadTable();
