@@ -1,7 +1,22 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {customersList} from "../db/db.js";
 let clickRecord;
+let cusId;
+loadId();
+function loadId() {
+    let cusId;
+    if (customersList.length === 0) {
+        cusId = "C" + 1;
+    } else {
 
+        let lastCustomerIdNumericPart = parseInt(customersList[customersList.length - 1].cusId.substring(1));
+        let newNumericPart = lastCustomerIdNumericPart + 1;
+        cusId = "C" + newNumericPart;
+    }
+    $('#customerIdField').val(cusId);
+}
+
+loadId();
 $('#nav-dashboard').on('click',()=>{
     $('#dashboardSection').removeClass("close");
     $('#customerSection').addClass("close");
@@ -50,30 +65,41 @@ $('#submitCusBtn').on('click',(event)=>{
        customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, cusAddDate);
        customersList.push(customer);
        console.log(customer.cusName);
+       $('#resetCusBtn').click();
        loadTable();
+
    }
 });
-$('#updateCusBtn').on('click',(event)=>{
+$('#updateCusBtn').on('click', (event) => {
     event.preventDefault();
-    let cusId=$('#customerIdField').val();
-    let cusName=$('#customerNameField').val();
-    let cusEmail=$('#customerEmailField').val();
-    let cusAddress=$('#customerAddressField').val();
-    let cusContact=$('#customerContactField').val();
+    let selectedIndex = $(this).index()+1;
+    let cusId = $('#customerIdField').val();
+    let cusName = $('#customerNameField').val();
+    let cusEmail = $('#customerEmailField').val();
+    let cusAddress = $('#customerAddressField').val();
+    let cusContact = $('#customerContactField').val();
 
-    customer.cusName=cusId;
-    customer.cusName=cusName;
-    customer.cusEmail=cusEmail;
-    customer.cusAddress=cusAddress;
-    customer.cusContact=cusContact;
 
-    console.log(customer.cusName);
-    loadTable();
+    if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < customersList.length) {
+        let selectCustomer = customersList[selectedIndex];
+        selectCustomer.cusId = cusId;
+        selectCustomer.cusName = cusName;
+        selectCustomer.cusEmail = cusEmail;
+        selectCustomer.cusAddress = cusAddress;
+        selectCustomer.cusContact = cusContact;
+        console.log(selectCustomer.cusName);
 
+        $('#resetCusBtn').click();
+
+
+        loadTable();
+    } else {
+        console.log("No row selected or invalid index");
+    }
 });
 $('#resetCusBtn').on('click',(event)=>{
     event.preventDefault();
-    $('#customerIdField').val("");
+   loadId();
     $('#customerNameField').val("");
     $('#customerEmailField').val("");
     $('#customerAddressField').val("");
