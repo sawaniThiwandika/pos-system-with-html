@@ -1,6 +1,7 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {customersList} from "../db/db.js";
 let clickRecord;
+
 $('#nav-dashboard').on('click',()=>{
     $('#dashboardSection').removeClass("close");
     $('#customerSection').addClass("close");
@@ -36,18 +37,21 @@ $('#nav-orders').on('click',()=>{
 });
 let customer;
 $('#submitCusBtn').on('click',(event)=>{
-event.preventDefault();
-    let cusId=$('#customerIdField').val();
-    let cusName=$('#customerNameField').val();
-    let cusEmail=$('#customerEmailField').val();
-    let cusAddress=$('#customerAddressField').val();
-    let cusContact=$('#customerContactField').val();
-    let cusAddDate= new Date().toISOString().split('T')[0];
-    customer=new CustomerModel(cusId,cusName,cusEmail,cusAddress,cusContact,cusAddDate);
-    customersList.push(customer);
-    console.log(customer.cusName);
-    loadTable();
+     let isValid=validateCustomer();
+    event.preventDefault();
 
+   if(isValid) {
+       let cusId = $('#customerIdField').val();
+       let cusName = $('#customerNameField').val();
+       let cusEmail = $('#customerEmailField').val();
+       let cusAddress = $('#customerAddressField').val();
+       let cusContact = $('#customerContactField').val();
+       let cusAddDate = new Date().toISOString().split('T')[0];
+       customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, cusAddDate);
+       customersList.push(customer);
+       console.log(customer.cusName);
+       loadTable();
+   }
 });
 $('#updateCusBtn').on('click',(event)=>{
     event.preventDefault();
@@ -114,3 +118,64 @@ $('#deleteCusBtn').on('click',(event)=>{
 });
 
 loadTable();
+function validateCustomer() {
+    let isValid = true;
+
+
+    let customerId = $('#customerIdField').val().trim();
+    if (customerId === '') {
+        isValid = false;
+        alert('Please enter Customer ID');
+        return isValid;
+    }
+
+
+    let customerName = $('#customerNameField').val().trim();
+    if (customerName === '') {
+        isValid = false;
+        alert('Please enter Name');
+        return isValid;
+    }
+
+
+    let customerEmail = $('#customerEmailField').val().trim();
+    if (customerEmail === '') {
+        isValid = false;
+        alert('Please enter Email');
+        return isValid;
+    } else {
+
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(customerEmail)) {
+            isValid = false;
+            alert('Please enter a valid Email address');
+            return isValid;
+        }
+    }
+
+
+    let customerAddress = $('#customerAddressField').val().trim();
+    if (customerAddress === '') {
+        isValid = false;
+        alert('Please enter City');
+        return isValid;
+    }
+
+
+    let customerContact = $('#customerContactField').val().trim();
+    if (customerContact === '') {
+        isValid = false;
+        alert('Please enter Contact');
+        return isValid;
+    } else {
+
+        let contactRegex = /^\d{10}$/;
+        if (!contactRegex.test(customerContact)) {
+            isValid = false;
+            alert('Please enter a valid Contact number (10 digits)');
+            return isValid;
+        }
+    }
+
+    return isValid;
+}
