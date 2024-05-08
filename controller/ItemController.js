@@ -1,6 +1,9 @@
 import {ItemModel} from "../model/ItemModel.js";
 import {itemList} from "../db/db.js";
 let item;
+function loadId() {
+
+}
 function loadItemTable() {
     $('#itemTableBody').empty();
     itemList.map((item, index) => {
@@ -32,4 +35,18 @@ $('#submitItemBtn').on('click', (event) => {
     itemList.push(item);
     loadItemTable();
     console.log(item);
+});
+
+
+
+$('#resetItemBtn').on('click',(event)=>{
+    event.preventDefault();
+    loadId();
+    $('#itemCodeField').val("");
+    $('#itemNameField').val("");
+    $('#itemQtyField').val("");
+    $('#itemCategoryField').val("");
+    $('#itemUnitPriceField').val("");
+    console.log("reset customer details");
+
 });
