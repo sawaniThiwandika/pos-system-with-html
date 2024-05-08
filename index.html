@@ -180,7 +180,97 @@
                 </tr>
                 </thead>
                 <tbody id="cusTableBody">
-                <!--<tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+<section id="itemSection">
+    <div id="statusDiv">
+        <div id="status">
+            <div id="categoryDiv">
+                <h2>Category</h2>
+                <h1>10</h1>
+            </div>
+            <div id="productsDiv">
+                <h2 style="color: #87A900">Total Products</h2>
+                <h1>100</h1>
+            </div>
+            <div id="sellingDiv">
+                <h2 style="color: #00B332">Total Selling</h2>
+                <h1>50</h1>
+            </div>
+            <div id="lowStockDiv">
+                <h2 style="color: #0088EB">Low stock</h2>
+                <h1>10</h1>
+            </div>
+            <div id="outStockDiv">
+                <h2 style="color: #F8263F">Out of Stock</h2>
+                <h1>10</h1>
+            </div>
+        </div>
+    </div>
+    <div id="addItemDiv">
+        <h3>Add Item</h3>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="itemCodeField" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="itemCodeField"  required>
+            </div>
+            <div class="col-md-4">
+                <label for="itemUnitPriceField" class="form-label">Unit Price</label>
+                <input type="number" class="form-control" id="itemUnitPriceField"  required>
+            </div>
+            <div class="col-md-4">
+                <label for="itemCategoryField" class="form-label">Category</label>
+                <div class="input-group">
+                    <input type="search" class="form-control" id="itemCategoryField" aria-describedby="inputGroupPrepend2" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="itemNameField" class="form-label">Name</label>
+                <input type="text" class="form-control" id="itemNameField" required>
+            </div>
+            <div class="col-md-3">
+                <label for="itemQtyField" class="form-label">Qty</label>
+                <input type="number" class="form-control" id="itemQtyField" required>
+            </div>
+
+
+            <div class="col-12" id="saveItemDiv">
+                <button class="btn btn-primary"  id="submitItemBtn">Save</button>
+            </div>
+            <div class="col-12" id="updateItemDiv">
+                <button class="btn btn-primary"  id="updateItemBtn">Update</button>
+            </div>
+            <div class="col-12" id="deleteItemDiv">
+                <button class="btn btn-primary"  id="deleteItemBtn">Delete</button>
+            </div>
+            <div class="col-12" id="resetItemDiv">
+                <button class="btn btn-primary" id="resetItemBtn" >Reset</button>
+            </div>
+        </form >
+    </div>
+
+    <div id="itemList">
+        <h3> Inventory</h3>
+        <input type="text" placeholder="Search Here" id="searchBarItems">
+        <div id="itemTableDiv">
+            <table class="table" id="itemTable">
+                <thead>
+                <tr>
+                    <th scope="col">Item code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Qty On Hand</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody id="itemTableBody">
+             <!--   <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
@@ -245,162 +335,6 @@
                     <td>Thornton</td>
                     <td>@fat</td>
                 </tr>-->
-
-                </tbody>
-            </table>
-        </div>
-        <!--<button id="more">See More</button>-->
-    </div>
-</section>
-<section id="itemSection">
-    <div id="statusDiv">
-        <div id="status">
-            <div id="categoryDiv">
-                <h2>Category</h2>
-                <h1>10</h1>
-            </div>
-            <div id="productsDiv">
-                <h2 style="color: #87A900">Total Products</h2>
-                <h1>100</h1>
-            </div>
-            <div id="sellingDiv">
-                <h2 style="color: #00B332">Total Selling</h2>
-                <h1>50</h1>
-            </div>
-            <div id="lowStockDiv">
-                <h2 style="color: #0088EB">Low stock</h2>
-                <h1>10</h1>
-            </div>
-            <div id="outStockDiv">
-                <h2 style="color: #F8263F">Out of Stock</h2>
-                <h1>10</h1>
-            </div>
-        </div>
-    </div>
-    <div id="addItemDiv">
-        <h3>Add Item</h3>
-        <form class="row g-3">
-            <div class="col-md-4">
-                <label for="validationDefault01" class="form-label">Item Code</label>
-                <input type="text" class="form-control" id="validationDefault01" value="I001" required>
-            </div>
-            <div class="col-md-4">
-                <label for="validationDefault02" class="form-label">Unit Price</label>
-                <input type="number" class="form-control" id="validationDefault02" value="Otto" required>
-            </div>
-            <div class="col-md-4">
-                <label for="validationDefaultUsername" class="form-label">Category</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="search" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="validationDefault03" class="form-label">Name</label>
-                <input type="text" class="form-control" id="validationDefault03" required>
-            </div>
-            <div class="col-md-3">
-                <label for="validationDefault04" class="form-label">Qty</label>
-                <input type="number" class="form-control" id="validationDefault04" required>
-            </div>
-
-
-            <div class="col-12" id="saveItemDiv">
-                <button class="btn btn-primary"  id="submitItemBtn">Save</button>
-            </div>
-            <div class="col-12" id="updateItemDiv">
-                <button class="btn btn-primary"  id="updateItemBtn">Update</button>
-            </div>
-            <div class="col-12" id="deleteItemDiv">
-                <button class="btn btn-primary"  id="deleteItemBtn">Delete</button>
-            </div>
-            <div class="col-12" id="resetItemDiv">
-                <button class="btn btn-primary" id="resetItemBtn" >Reset</button>
-            </div>
-        </form >
-    </div>
-
-    <div id="itemList">
-        <h3> Inventory</h3>
-        <input type="text" placeholder="Search Here" id="searchBarItems">
-        <div id="itemTableDiv">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Item code</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Unit Price</th>
-                    <th scope="col">Qty On Hand</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
 
                 </tbody>
             </table>
@@ -672,6 +606,7 @@
 </footer>
 <script src="assets/lib/jquery-3.7.1.min.js"></script>
 <script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/ItemController.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

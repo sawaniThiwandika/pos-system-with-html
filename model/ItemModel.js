@@ -1,18 +1,19 @@
 export class ItemModel{
     constructor(itemCode,unitPrice,category,itemName,itemQty) {
-        this.itemCode = itemCode;
-        this.unitPrice = unitPrice;
-        this.category = category;
-        this.itemName = itemName;
-        this.itemQty = itemQty;
+        this._itemCode = itemCode;
+        this._unitPrice = unitPrice;
+        this._category = category;
+        this._itemName = itemName;
+        this._itemQty = itemQty;
     }
 
+
     get itemCode() {
-        return this.itemCode;
+        return this._itemCode;
     }
 
     set itemCode(value) {
-        this.itemCode = value;
+        this._itemCode = value;
     }
 
     get unitPrice() {
