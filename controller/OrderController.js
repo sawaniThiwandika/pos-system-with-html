@@ -9,15 +9,16 @@ $(document).ready(function() {
 
     $("#customerContactFieldOrder").on("change", function() {
         var selectedValue = $(this).val();
-     /*   updateOtherFields(selectedValue);*/
+       updateOtherFieldsCustomerOrder(selectedValue);
     });
 
     $("#customerContactFieldOrder").on("input", function() {
         var selectedValue = $(this).val();
         if (!selectedValue) {
-          /*  clearOtherFields();*/
+          clearOtherFieldsCustomerOrder();
         }
     });
+
 
 
 });
@@ -28,7 +29,21 @@ function populateDatalistCustomerOrder() {
         datalistForCustomers.append($("<option>", { value: item.cusContact }));
     });
 }
+function updateOtherFieldsCustomerOrder(selectedValue) {
+    var selectedCustomer= customersList.find(function(item) {
+        return item.cusContact === selectedValue;
+    });
 
+    if (selectedCustomer) {
+        $("#customerNameFieldOrder").val(selectedCustomer.cusName);
+        $("#customerIdFieldOrder").val(selectedCustomer.cusId);
+    }
+}
+function clearOtherFieldsCustomerOrder() {
+    $("#customerIdFieldOrder").val("");
+    $("#customerNameFieldOrder").val("");
+
+}
 $(document).ready(function() {
 
     $("#itemNameFieldInOrder").on("input", function() {
