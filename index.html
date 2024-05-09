@@ -296,10 +296,14 @@
                     <input type="text" class="form-control" id="orderIdField"  required>
                 </div>
                 <div class="col-md-4">
-                    <label for="customerIdFieldOrder" class="form-label">Customer ID</label>
-                    <input type="search" class="form-control" id="customerIdFieldOrder"  required>
+                    <label for="customerContactFieldOrder" class="form-label">Contact</label>
+                    <input type="search" class="form-control" id="customerContactFieldOrder"  required list="customerListForOrder">
                 </div>
-
+                <datalist id="customerListForOrder"></datalist>
+                <div class="col-md-6">
+                    <label for="customerNameFieldOrder" class="form-label" >Customer ID</label>
+                    <input type="text" class="form-control" id="customerIdFieldOrder" required >
+                </div>
                 <div class="col-md-6">
                     <label for="customerNameFieldOrder" class="form-label" >Customer Name</label>
                     <input type="text" class="form-control" id="customerNameFieldOrder" required >

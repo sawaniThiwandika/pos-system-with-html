@@ -1,5 +1,34 @@
 import {customersList, itemList} from "../db/db.js";
 import {OrderModel} from "../model/OrderModel.js";
+
+$(document).ready(function() {
+
+    $("#customerContactFieldOrder").on("input", function() {
+       populateDatalistCustomerOrder();
+    });
+
+    $("#customerContactFieldOrder").on("change", function() {
+        var selectedValue = $(this).val();
+     /*   updateOtherFields(selectedValue);*/
+    });
+
+    $("#customerContactFieldOrder").on("input", function() {
+        var selectedValue = $(this).val();
+        if (!selectedValue) {
+          /*  clearOtherFields();*/
+        }
+    });
+
+
+});
+function populateDatalistCustomerOrder() {
+    var datalistForCustomers = $("#customerListForOrder");
+    datalistForCustomers.empty();
+    $.each(customersList, function(index, item) {
+        datalistForCustomers.append($("<option>", { value: item.cusContact }));
+    });
+}
+
 $(document).ready(function() {
 
     $("#itemNameFieldInOrder").on("input", function() {
