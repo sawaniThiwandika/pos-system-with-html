@@ -3,6 +3,7 @@ import { itemList} from "../db/db.js";
 let item;
 loadId();
 let selectedIndex;
+
 function loadId() {
     let itemCode;
     if (itemList.length === 0) {
@@ -102,3 +103,5 @@ $('#itemTableBody').on('click','tr',function () {
     $('#itemCategoryField').val(category);
     $('#resetCusBtn').click();
 });
+/*
+$('#itemNameField').*/

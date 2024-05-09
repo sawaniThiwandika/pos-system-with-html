@@ -226,8 +226,16 @@
             <div class="col-md-4">
                 <label for="itemCategoryField" class="form-label">Category</label>
                 <div class="input-group">
-                    <input type="search" class="form-control" id="itemCategoryField" aria-describedby="inputGroupPrepend2" required>
+                    <input type="search" class="form-control" id="itemCategoryField" aria-describedby="inputGroupPrepend2" required list="categoryDataList">
                 </div>
+                <datalist id="categoryDataList">
+                    <option >Mouse</option>
+                    <option>Keyboard</option>
+                    <option>U.P.S</option>
+                    <option >Monitor</option>
+                    <option>Speaker</option>
+
+                </datalist>
             </div>
             <div class="col-md-6">
                 <label for="itemNameField" class="form-label">Name</label>
@@ -270,71 +278,6 @@
                 </tr>
                 </thead>
                 <tbody id="itemTableBody">
-             <!--   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>-->
 
                 </tbody>
             </table>
@@ -356,21 +299,12 @@
                     <label for="validationDefault02" class="form-label">Customer ID</label>
                     <input type="search" class="form-control" id="validationDefault02" value="Otto" required>
                 </div>
-                <!-- <div class="col-md-4">
-                     <label for="validationDefaultUsername" class="form-label">Category</label>
-                     <div class="input-group">
-                         <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                         <input type="search" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
-                     </div>
-                 </div>-->
+
                 <div class="col-md-6">
                     <label for="validationDefault03" class="form-label" >Customer Name</label>
                     <input type="text" class="form-control" id="validationDefault03" required >
                 </div>
-                <!--<div class="col-md-3">
-                    <label for="validationDefault04" class="form-label">Qty</label>
-                    <input type="number" class="form-control" id="validationDefault04" required>
-                </div>-->
+
 
 
 
@@ -399,9 +333,10 @@
                      </div>&ndash;&gt;
                  </div>-->
                 <div class="col-md-6">
-                    <label for="validationDefault07" class="form-label">Item Name</label>
-                    <input type="text" class="form-control" id="validationDefault07" required>
+                    <label for="itemNameFieldInOrder" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="itemNameFieldInOrder" required list="itemListForOrder">
                 </div>
+                <datalist id="itemListForOrder"></datalist>
                 <div class="col-md-6">
                     <label for="validationDefault08" class="form-label">Unit Price</label>
                     <input type="text" class="form-control" id="validationDefault08" required>
@@ -600,13 +535,14 @@
     </div>
     <div id="locationdiv"><img src="assets/location.png" width="20"><h3 id="location"> Polegoda, Mahagama</h3></div>
     <div id="contactDiv"> <img src="assets/call.png" width="20"><h3 id="contact" > +94763519008</h3></div>
-    <div id="emailDiv"><img src="assets/email.png" width="20"> <h3 id="email"> chathufoodcity@gmail.com</h3></div>
+    <div id="emailDiv"><img src="assets/email.png" width="20"> <h3 id="email"> technexus@gmail.com</h3></div>
 
 
 </footer>
 <script src="assets/lib/jquery-3.7.1.min.js"></script>
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/ItemController.js"></script>
+<script type="module" src="controller/OrderController.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

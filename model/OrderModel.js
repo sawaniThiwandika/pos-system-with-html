@@ -1,4 +1,4 @@
-import {CustomerModel} from "./CustomerModel";
+import {CustomerModel} from "./CustomerModel.js";
 export class OrderModel{
     constructor(customer,itemList,date,total) {
         this._customer = customer;
