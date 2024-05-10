@@ -4,17 +4,25 @@ import {CustomerModel} from "../model/CustomerModel.js";
 import {OrderItemDetailsModel} from "../model/OrderItemDetails.js";
 
 let selectedCustomer = new CustomerModel();
-let order = new OrderModel();
+let order;
+let orderId;
 loadId();
 
 function loadId() {
-    let orderId;
+    order = new OrderModel();
+
     if (orderList.length === 0) {
-        orderId = "O-1";
+        orderId = "O1";
     } else {
-        let lastOrderIdNumericPart = parseInt(orderList[orderList.length - 1].orderId.substring(2));
-        let newNumericPart = lastOrderIdNumericPart + 1;
-        orderId = "O-" + newNumericPart;
+        let lastOrderId = orderList[orderList.length - 1];
+        if (lastOrderId && lastOrderId.id) {
+            let lastOrderIdNumericPart = parseInt(lastOrderId.id.substring(1));
+            let newNumericPart = lastOrderIdNumericPart + 1;
+            orderId = "O" + newNumericPart;
+        } else {
+            // Handle the case where the last order ID is invalid
+            orderId = "O1";
+        }
     }
     $('#orderIdField').val(orderId);
 }
@@ -135,23 +143,60 @@ function updateTotalPrice() {
     }
 }
 
+function calculateNetTotal() {
+    let netTotal = 0;
+
+    // Iterate over each row of the cart table
+    $('#cartTableBody tr').each(function() {
+        // Extract the total amount from the row
+        let totalAmount = parseFloat($(this).find('.colItemTotalCart').text());
+
+        // Add the total amount to the net total
+        if (!isNaN(totalAmount)) {
+            netTotal += totalAmount;
+        }
+    });
+
+
+    $('#totalValue').text(netTotal.toFixed(2));
+}
+
 function addToCart() {
     $('#cartTableBody').empty();
-    order.itemListOrder.map((item, index) => {
+    order.itemListOrder.forEach((item, index) => {
         if (index > 0) {
             var record = `<tr>
-         <td  class="colItemCodeCart" >${item.itemCode}</td>
-            <td class="colItemNameCart">${item.itemName}</td>
-            <td class="cilItemQtyCart">${item.qty}</td>
-            <td class="colItemUnitPriceCart">${item.unitPrice}</td>
-            <td class="colItemTotalCart">${item.total}</td>
-            <td class="colItemRemoveButtonCart"><button>Remove</button></td>
-        </tr>`;
+                <td class="colItemCodeCart">${item.itemCode}</td>
+                <td class="colItemNameCart">${item.itemName}</td>
+                <td class="cilItemQtyCart">${item.qty}</td>
+                <td class="colItemUnitPriceCart">${item.unitPrice}</td>
+                <td class="colItemTotalCart">${item.total}</td>
+                <td class="colItemRemoveButtonCart"><button class="removeFromCart">Remove</button></td>
+            </tr>`;
             $('#cartTableBody').append(record);
         }
-
     });
+
+    // Attach click event listener to the "Remove" buttons
+    $('#cartTableBody').on('click', '.removeFromCart', function() {
+        // Get the item code of the item to remove
+        var itemCodeToRemove = $(this).closest('tr').find('.colItemCodeCart').text();
+
+        // Find the index of the item with the matching item code in the array
+        var indexToRemove = order.itemListOrder.findIndex(item => item.itemCode === itemCodeToRemove);
+
+        // Remove the item from the array if found
+        if (indexToRemove !== -1) {
+            order.itemListOrder.splice(indexToRemove, 1);
+            addToCart(); // Rebuild the cart table
+            calculateNetTotal(); // Recalculate the net total
+        }
+    });
+
+    calculateNetTotal();
 }
+
+addToCart();
 
 function checkDuplicate() {
     let itemCode = $("#itemCodeFieldOrder").val();
@@ -187,4 +232,28 @@ $("#addToCartButtonOrder").on("click", function () {
     }
     addToCart();
     clearOtherFields();
+});
+
+function loadOrderList() {
+    $('#orderListTableBody').empty();
+    orderList.map((item, index) => {
+        var record = `<tr>
+         <td  class="colOrderId" >${item.id}</td>
+            <td class="colCustomerIdOrderList">${item.customer.cusId}</td>
+            <td class="colCustomerNameOrderList">${item.customer.cusName}</td>
+            <td class="colDateOrder">${item.date}</td>
+            <td class="colTotalOrder">${item.total}</td>
+            <td class="colViewItems"><button>View Items</button></td>
+        </tr>`;
+        $('#orderListTableBody').append(record);
+    });
+}
+
+$("#placeOrder").on("click", function () {
+    order.id=orderId;
+    order.total = $("#totalValue").text().trim();
+    order.date=new Date().toISOString().split('T')[0];
+    orderList.push(order);
+    loadOrderList();
+    loadId();
 });
