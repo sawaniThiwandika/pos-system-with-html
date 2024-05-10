@@ -153,15 +153,38 @@ function addToCart() {
     });
 }
 
-$("#addToCartButtonOrder").on("click", function () {
-    let id = $("#orderIdField").val();
-    let itemName = $("#itemNameFieldInOrder").val();
+function checkDuplicate() {
     let itemCode = $("#itemCodeFieldOrder").val();
-    let qty = $("#itemQtyFieldOrder").val();
-    let unitPrice = $("#itemUnitPriceFieldOrder").val();
-    let totalPriceOfItem = $("#totalPriceFieldInOrder").val();
-    order.itemListOrder.push(new OrderItemDetailsModel(id, itemCode, itemName, qty, unitPrice, totalPriceOfItem));
-    console.log(order.itemListOrder);
+    for (let index = 0; index < order.itemListOrder.length; index++) {
+        if (itemCode === order.itemListOrder[index].itemCode) {
+            return index; // Return the index of the duplicate item
+        }
+    }
+    return -1; // Return -1 if no duplicate is found
+}
+
+$("#addToCartButtonOrder").on("click", function () {
+    var newQty = parseFloat($("#itemQtyFieldOrder").val());
+    var unitPrice = parseFloat($("#itemUnitPriceFieldOrder").val());
+    var index = checkDuplicate();
+    if (index > -1) {
+        var oldQty = parseFloat(order.itemListOrder[index].qty);
+        newQty = oldQty + newQty;
+        var newPrice=newQty*unitPrice;
+        order.itemListOrder[index].qty=newQty;
+        order.itemListOrder[index].total=newPrice;
+    }
+
+    else {
+        let id = $("#orderIdField").val();
+        let itemName = $("#itemNameFieldInOrder").val();
+        let itemCode = $("#itemCodeFieldOrder").val();
+        let qty = $("#itemQtyFieldOrder").val();
+        let unitPrice = $("#itemUnitPriceFieldOrder").val();
+        let totalPriceOfItem = $("#totalPriceFieldInOrder").val();
+        order.itemListOrder.push(new OrderItemDetailsModel(id, itemCode, itemName, qty, unitPrice, totalPriceOfItem));
+        console.log(order.itemListOrder);
+    }
     addToCart();
     clearOtherFields();
 });
