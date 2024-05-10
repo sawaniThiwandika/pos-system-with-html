@@ -3,6 +3,7 @@ import {OrderModel} from "../model/OrderModel.js";
 import {CustomerModel} from "../model/CustomerModel.js";
 import {OrderItemDetailsModel} from "../model/OrderItemDetails.js";
 
+
 let selectedCustomer = new CustomerModel();
 let order;
 let orderId;
@@ -208,10 +209,24 @@ function checkDuplicate() {
     return -1; // Return -1 if no duplicate is found
 }
 
+function updateQuentity(newQty) {
+    let itemCode = $("#itemCodeFieldOrder").val();
+    for (let index = 0; index < order.itemListOrder.length; index++) {
+        if (itemCode === order.itemListOrder[index].itemCode) {
+            order.itemListOrder[index].itemQty=parseFloat(order.itemListOrder[index].itemQty)-parseFloat(newQty);
+
+
+        }
+    }
+}
+
 $("#addToCartButtonOrder").on("click", function () {
     var newQty = parseFloat($("#itemQtyFieldOrder").val());
     var unitPrice = parseFloat($("#itemUnitPriceFieldOrder").val());
     var index = checkDuplicate();
+
+    updateQuentity(newQty);
+
     if (index > -1) {
         var oldQty = parseFloat(order.itemListOrder[index].qty);
         newQty = oldQty + newQty;
