@@ -1,10 +1,15 @@
 import {CustomerModel} from "./CustomerModel.js";
+import {OrderItemDetailsModel} from "./OrderItemDetails.js";
+
 export class OrderModel{
-    constructor(customer,itemList,date,total) {
+   customer=new CustomerModel();
+   itemListOrder=[OrderItemDetailsModel];
+    constructor(customer,itemListOrder,date,total) {
         this._customer = customer;
-        this._itemList = itemList;
+
         this._date = date;
         this._total = total;
+        this._itemListOrder = itemListOrder;
     }
 
     get customer() {
@@ -15,12 +20,13 @@ export class OrderModel{
         this._customer = value;
     }
 
-    get itemList() {
-        return this._itemList;
+
+    get itemListOrder() {
+        return this._itemListOrder;
     }
 
-    set itemList(value) {
-        this._itemList = value;
+    set itemListOrder(value) {
+        this._itemListOrder = value;
     }
 
     get date() {

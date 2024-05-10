@@ -315,7 +315,7 @@
 
             </form >
             <div class="col-12" id="selectCusBtnDiv">
-                <button class="btn btn-primary" type="submit">Select</button>
+                <button class="btn btn-primary" type="submit" id="selectBtnCustomerBtnOrder">Select</button>
             </div>
         </div>
         <div id="selectItemDiv">
@@ -359,7 +359,7 @@
 
             </form >
             <div class="col-12" id="addToCartDiv">
-                <button class="btn btn-primary" type="submit">Add to Cart</button>
+                <button class="btn btn-primary" type="submit" id="addToCartButtonOrder">Add to Cart</button>
             </div>
 
         </div>
@@ -372,12 +372,13 @@
                         <th scope="col">Item</th>
                         <th scope="col">Name</th>
                         <th scope="col">Qty</th>
+                        <th scope="col">UnitPrice</th>
                         <th scope="col">Total</th>
                         <th scope="col">Remove</th>
 
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="cartTableBody">
                     <tr>
                         <th scope="row">1</th>
                         <td>Mark</td>
