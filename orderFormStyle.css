@@ -89,7 +89,7 @@
     body{
 
         position: relative;
-        height: 2750px;
+  /*      height: 2750px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -776,7 +776,7 @@
     body{
 
         position: relative;
-        height: 2200px;
+       /* height: 2200px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -1130,7 +1130,7 @@
     body{
 
         position: relative;
-        height: 2000px;
+      /*  height: 2000px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -1481,7 +1481,7 @@
     body{
 
         position: relative;
-        height: 2000px;
+ /*       height: 2000px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -1836,7 +1836,7 @@
     body{
 
         position: relative;
-        height: 2000px;
+      /*  height: 2000px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -2194,12 +2194,12 @@
 
 }
 @media all and  (min-width:1440px){
-    body{
+ /*   body{
 
         position: relative;
         height: 1600px;
         width: 100vw;
-    }
+    }*/
     .container-fluid{
         background-color: #365486;
     }

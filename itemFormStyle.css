@@ -1,804 +1,4 @@
-/*
 
-@media only screen and (min-width: 1300px){
-    body {
-
-        position: relative;
-        height: 1800px;
-        width: 100vw;
-    }
-
-    .container-fluid {
-        background-color: #365486;
-    }
-
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
-    #statusDiv{
-        width: 100%;
-        height: 600px;
-        position: absolute;
-        top:50px;
-        margin: auto;
-    }
-    #status{
-        width: 97%;
-        height: 200px;
-        position: absolute;
-        top:100px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #365486;
-        border-radius: 20px;
-    }
-    #categoryDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 20px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #productsDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(18% + 40px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #sellingDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(36% + 60px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #lowStockDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(54% + 80px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #outStockDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(72% + 100px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #status>div>h2{
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-    }
-    #status>div>h1{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 15px;
-        margin: auto;
-        width: fit-content;
-    }
-    #categoryDiv>h2{
-        color: #0047FC;
-    }
-
-    #addDiv {
-        top: 450px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 400px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addDiv>h3{
-        position: absolute;
-        left: 20px;
-        top:20px;
-        margin: auto;
-    }
-
-    #addDiv > form {
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        bottom: 100px;
-        margin: 20px;
-
-    }
-
-    #updateDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #itemList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 950px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #more{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
-
-    }
-    #itemList>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 50px;
-        margin: auto;
-        width: 98%;
-        height: 75%;
-    }
-    footer{
-        position: absolute;
-        text-align: center;
-        font-family: "Times New Roman";
-        padding: 3px;
-        background-color: black;
-        color: white;
-        font-size: 15px;
-        bottom: 0;
-        width: 100%;
-        height: 150px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
-    footer > div > h3 {
-        position: absolute;
-
-        font-family: "Times New Roman";
-        font-size: 10px;
-        right: 10px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    #contactdiv {
-        top: 10px;
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        margin: auto;
-    }
-
-    #emailDiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        top: 43px;
-        margin: auto;
-    }
-
-    #locationdiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        bottom: 40px;
-    }
-    #copy{
-        position: absolute;
-        bottom: 0;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 10px;
-    }
-    #contact{
-        position: absolute;
-        top:10px;
-        width: fit-content;
-
-    }
-    footer > div >img{
-
-        position: absolute;
-        right: 150px;
-    }
-
-}
-@media only screen and (min-width: 834px) {
-    body {
-
-        position: relative;
-        height: 1800px;
-        width: 100vw;
-    }
-
-    .container-fluid {
-        background-color: #365486;
-    }
-
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
-    #statusDiv{
-        width: 100%;
-        height: 600px;
-        position: absolute;
-        top:50px;
-        margin: auto;
-    }
-    #status{
-        width: 97%;
-        height: 200px;
-        position: absolute;
-        top:100px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #365486;
-        border-radius: 20px;
-    }
-    #categoryDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: 20px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #productsDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(18% + 40px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #sellingDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(36% + 60px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #lowStockDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(54% + 80px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #outStockDiv{
-        width: 18%;
-        height: 150px;
-        position: absolute;
-        bottom: 0;
-        top: 0;
-        left: calc(72% + 100px);
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #status>div>h2{
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: fit-content;
-    }
-    #status>div>h1{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 15px;
-        margin: auto;
-        width: fit-content;
-    }
-    #categoryDiv>h2{
-        color: #0047FC;
-    }
-
-    #addDiv {
-        top: 450px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 400px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addDiv>h3{
-        position: absolute;
-        left: 20px;
-        top:20px;
-        margin: auto;
-    }
-
-    #addDiv > form {
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        bottom: 100px;
-        margin: 20px;
-
-    }
-
-    #updateDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #itemList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 950px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #more{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
-
-    }
-    #itemList>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 50px;
-        margin: auto;
-        width: 98%;
-        height: 75%;
-    }
-    footer{
-        position: absolute;
-        text-align: center;
-        font-family: "Times New Roman";
-        padding: 3px;
-        background-color: black;
-        color: white;
-        font-size: 15px;
-        bottom: 0;
-        width: 100%;
-        height: 150px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
-    footer > div > h3 {
-        position: absolute;
-
-        font-family: "Times New Roman";
-        font-size: 10px;
-        right: 10px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    #contactdiv {
-        top: 10px;
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        margin: auto;
-    }
-
-    #emailDiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        top: 43px;
-        margin: auto;
-    }
-
-    #locationdiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        bottom: 40px;
-    }
-    #copy{
-        position: absolute;
-        bottom: 0;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 10px;
-    }
-    #contact{
-        position: absolute;
-        top:10px;
-        width: fit-content;
-
-    }
-    footer > div >img{
-
-        position: absolute;
-        right: 150px;
-    }
-
-
-}
-@media only screen and (max-width: 834px) {
-    body {
-
-        position: relative;
-        height: 2000px;
-        width: 100vw;
-    }
-
-    .container-fluid {
-        background-color: #365486;
-    }
-
-    nav {
-        position: relative;
-        z-index: 9999;
-    }
-    #statusDiv{
-        width: 100%;
-        height: 300px;
-        position: absolute;
-        top:50px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    #status{
-        width: 97%;
-        height: 320px;
-        position: absolute;
-        top:50px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #365486;
-        border-radius: 20px;
-    }
-    #categoryDiv{
-        width: 95%;
-        height: 50px;
-        position: absolute;
-        top:10px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #productsDiv{
-        width: 95%;
-        height: 50px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        top: 70px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #sellingDiv{
-        width: 95%;
-        height: 50px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        top: 130px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-    #lowStockDiv{
-        width: 95%;
-        height: 50px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        top:190px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-   #outStockDiv{
-        width: 95%;
-        height: 50px;
-        left: 0;
-        right: 0;
-        position: absolute;
-        top: 250px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-
-    #status>div>h2{
-        position: absolute;
-        left: 30px;
-        top:0;
-        bottom: 0;
-        margin: auto;
-        width: fit-content;
-    }
-    #status>div>h1{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top:0 ;
-        bottom: 0;
-        margin: auto;
-        width: fit-content;
-    }
-    #categoryDiv>h2{
-        color: #0047FC;
-    }
-
-    #addDiv {
-        top: 500px;
-        position: absolute;
-        background-color: #7FC7D9;
-        width: 98%;
-        height: 600px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 10px;
-
-    }
-    #addDiv>h3{
-        position: absolute;
-        left: 20px;
-        top:20px;
-        margin: auto;
-    }
-
-    #addDiv > form {
-        position: absolute;
-        width: 90%;
-        left: 0;
-        right: 0;
-        bottom: 100px;
-        margin: 20px;
-
-    }
-
-    #updateDiv {
-        position: absolute;
-        left: 100px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #deleteDiv {
-        position: absolute;
-        left: 200px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-
-    #saveDiv {
-        position: absolute;
-        left: 20px;
-        right: 0;
-        bottom: -75px;
-        margin: auto;
-    }
-    #itemList{
-        position: absolute;
-        left:0;
-        right: 0;
-        top: 1200px;
-        width: 98%;
-        margin: auto;
-        height: 600px;
-        background-color: #DCF2F1;
-        border-radius: 10px;
-
-    }
-    #more{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: 98%;
-        height: 40px;
-        border-radius: 10px;
-        border: solid white;
-
-    }
-    #itemList>table{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 50px;
-        margin: auto;
-        width: 98%;
-        height: 75%;
-    }
-    footer{
-        position: absolute;
-        text-align: center;
-        font-family: "Times New Roman";
-        padding: 3px;
-        background-color: black;
-        color: white;
-        font-size: 15px;
-        bottom: 0;
-        width: 100%;
-        height: 150px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
-    footer > div > h3 {
-        position: absolute;
-
-        font-family: "Times New Roman";
-        font-size: 10px;
-        right: 10px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    #contactdiv {
-        top: 10px;
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        margin: auto;
-    }
-
-    #emailDiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        top: 43px;
-        margin: auto;
-    }
-
-    #locationdiv {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        bottom: 40px;
-    }
-    #copy{
-        position: absolute;
-        bottom: 0;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 10px;
-    }
-    #contact{
-        position: absolute;
-        top:10px;
-        width: fit-content;
-
-    }
-    footer > div >img{
-
-        position: absolute;
-        right: 150px;
-    }
-
-}
-*/
 
 
 
@@ -806,7 +6,7 @@
     body {
 
         position: relative;
-        height: 2000px;
+    /*    height: 2000px;*/
         width: 100vw;
     }
 
@@ -1117,7 +317,7 @@
     body {
 
     position: relative;
-    height: 2000px;
+   /* height: 2000px;*/
     width: 100vw;
 }
 
@@ -1428,7 +628,7 @@
     body {
 
         position: relative;
-        height: 2000px;
+    /*    height: 2000px;*/
         width: 100vw;
     }
 
@@ -1739,7 +939,7 @@
     body {
 
         position: relative;
-        height: 1800px;
+    /*    height: 1800px;*/
         width: 100vw;
     }
 
@@ -2052,7 +1252,7 @@
     body {
 
         position: relative;
-        height: 1800px;
+        /*height: 600px;*/
         width: 100vw;
     }
 
@@ -2066,7 +1266,7 @@
     }
     #statusDiv{
         width: 100%;
-        height: 600px;
+        height: 300px;
         position: absolute;
         top:50px;
         margin: auto;
@@ -2075,7 +1275,8 @@
         width: 97%;
         height: 200px;
         position: absolute;
-        top:100px;
+        top:0;
+        bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
@@ -2157,7 +1358,7 @@
     }
 
     #addItemDiv {
-        top: 450px;
+        top: 400px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -2360,7 +1561,7 @@
     body {
 
         position: relative;
-        height: 1800px;
+   /*     height: 1800px;*/
         width: 100vw;
     }
 
@@ -2374,7 +1575,7 @@
     }
     #statusDiv{
         width: 100%;
-        height: 600px;
+        height: 300px;
         position: absolute;
         top:50px;
         margin: auto;
@@ -2383,7 +1584,8 @@
         width: 97%;
         height: 200px;
         position: absolute;
-        top:100px;
+        top:0;
+        bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
@@ -2465,7 +1667,7 @@
     }
 
     #addItemDiv {
-        top: 450px;
+        top: 400px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -2668,7 +1870,7 @@
     body {
 
         position: relative;
-        height: 1800px;
+       /* height: 1800px;*/
         width: 100vw;
     }
 
@@ -2682,16 +1884,17 @@
     }
     #statusDiv{
         width: 100%;
-        height: 600px;
+        height: 300px;
         position: absolute;
-        top:50px;
+        top:30px;
         margin: auto;
     }
     #status{
         width: 97%;
         height: 200px;
         position: absolute;
-        top:100px;
+        top:0;
+        bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
@@ -2773,7 +1976,7 @@
     }
 
     #addItemDiv {
-        top: 450px;
+        top: 400px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;

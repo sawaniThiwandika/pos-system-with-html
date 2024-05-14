@@ -4,7 +4,11 @@
 
 @media all and (max-width: 320px ){
 
-
+    #customerSection {
+        position: relative;
+        height:1500px;
+        background-color: white;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -15,7 +19,7 @@
     }
 
     #addCustomerDiv{
-        top: 100px;
+        top: 50px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -76,7 +80,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 80px;
+        top: 100px;
         margin: auto;
         width: 98%;
         height: 470px;
@@ -88,6 +92,7 @@
         width: fit-content;
         margin: 20px;
     }
+
 
     #searchBarCustomers{
 
@@ -204,9 +209,16 @@
         left: 10px;
         width: 80px;
     }
+    #resetCustomerDiv{
+        display: none;
+    }
 }
 @media all and (min-width: 321px ) and (max-width: 460px){
-
+    #customerSection {
+        position: relative;
+        height:1400px;
+        background-color: white;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -217,7 +229,7 @@
     }
 
     #addCustomerDiv {
-        top: 100px;
+        top: 50px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -240,31 +252,27 @@
 
     #updateCustomerDiv {
         position: absolute;
-        left: 100px;
-        right: 0;
+        left: 70px;
         bottom: -75px;
         margin: auto;
     }
 
     #deleteCustomerDiv {
         position: absolute;
-        left: 200px;
-        right: 0;
+        left: 160px;
         bottom: -75px;
         margin: auto;
     }
 
     #saveCustomerDiv {
         position: absolute;
-        left: 20px;
-        right: 0;
+        left:0;
         bottom: -75px;
         margin: auto;
     }
     #resetCustomerDiv{
         position: absolute;
-        left:300px;
-        right: 0;
+        left:250px;
         bottom: -75px;
         margin: auto;
     }
@@ -329,14 +337,14 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 30px;
+        top:20px;
         margin: auto;
         width: 100%;
 
     }
 
 
-    footer {
+   /* footer {
         position: absolute;
         text-align: center;
         font-family: "Times New Roman";
@@ -350,7 +358,7 @@
         left: 0;
         right: 0;
         margin: auto;
-    }
+    }*/
 
     footer > div > h3 {
         position: absolute;
@@ -415,7 +423,11 @@
 }
 @media all and (min-width: 461px ) and (max-width: 768px){
 
-
+    #customerSection {
+        position: relative;
+        height:1400px;
+        background-color: white;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -426,7 +438,7 @@
     }
 
     #addCustomerDiv {
-        top: 100px;
+        top: 50px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -482,7 +494,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 800px;
+        top: 750px;
         width: 98%;
         margin: auto;
         height: 600px;
@@ -631,7 +643,11 @@
 }
 @media all and (min-width: 769px ) and (max-width: 834px){
 
-
+    #customerSection {
+        position: relative;
+        height:1300px;
+        background-color: white;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -642,7 +658,7 @@
     }
 
     #addCustomerDiv {
-        top: 100px;
+        top: 80px;
         position: absolute;
         background-color: #7FC7D9;
         width: 98%;
@@ -691,7 +707,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 600px;
+        top: 550px;
         width: 98%;
         margin: auto;
         height: 600px;
@@ -840,7 +856,11 @@
     }
 }
 @media all and (min-width: 835px ) and (max-width: 1024px){
-
+    #customerSection {
+        position: relative;
+        height:1200px;
+        background-color: white;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -849,7 +869,7 @@
         z-index: 9999;
     }
     #addCustomerDiv{
-        top: 100px;
+        top: 50px;
         position: absolute;
         background-color:#7FC7D9;
         width: 98%;
@@ -893,7 +913,7 @@
         position: absolute;
         left:0;
         right: 0;
-        top: 550px;
+        top: 500px;
         width: 98%;
         margin: auto;
         height: 600px;
@@ -1039,7 +1059,11 @@
 
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
-
+    #customerSection {
+        position: relative;
+        height:1300px;
+        background-color: white;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -1048,7 +1072,7 @@
         z-index: 9999;
     }
     #addCustomerDiv{
-        top: 100px;
+        top: 50px;
         position: absolute;
         background-color:#7FC7D9;
         width: 98%;
@@ -1099,7 +1123,7 @@
         position: absolute;
         left:0;
         right: 0;
-        top: 550px;
+        top: 500px;
         width: 98%;
         margin: auto;
         height: 700px;
@@ -1237,7 +1261,11 @@
     }
 }
 @media all and  (min-width:1440px){
-
+    #customerSection {
+        position: relative;
+        height:1300px;
+        background-color: white;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -1246,7 +1274,7 @@
         z-index: 9999;
     }
     #addCustomerDiv{
-        top: 120px;
+        top: 50px;
         position: absolute;
         background-color:#7FC7D9;
         width: 98%;
@@ -1298,8 +1326,8 @@
         position: absolute;
         left:0;
         right: 0;
-        top: 550px;
-        width: 100%;
+        top: 500px;
+        width: 98%;
         margin: auto;
         height: 720px;
         background-color: #DCF2F1;
@@ -1369,7 +1397,7 @@
         color: white;
         font-size: 15px;
         bottom: 0;
-        width: 100%;
+        width: 100vw;
         height: 150px;
         left: 0;
         right: 0;

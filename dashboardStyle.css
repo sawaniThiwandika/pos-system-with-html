@@ -4,8 +4,13 @@
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 2150px;
+/*        height: 2150px;*/
         width: 100vw;
+    }
+    #dashboardSection {
+        position: relative;
+        height: 2000px;
+        background-color: #DCF2F1;
     }
     .container-fluid{
 
@@ -228,8 +233,13 @@
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 2150px;
+     /*   height: 2150px;*/
         width: 100vw;
+    }
+    #dashboardSection {
+        position: relative;
+        height: 2000px;
+        background-color: #DCF2F1;
     }
     .container-fluid{
 
@@ -451,8 +461,13 @@
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 2150px;
+     /*   height: 2150px;*/
         width: 100vw;
+    }
+    #dashboardSection {
+        position: relative;
+        height: 2000px;
+        background-color: #DCF2F1;
     }
     .container-fluid{
 
@@ -705,8 +720,13 @@
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 2150px;
+      /*  height: 2150px;*/
         width: 100vw;
+    }
+    #dashboardSection {
+        position: relative;
+        height: 2000px;
+        background-color: #DCF2F1;
     }
     .container-fluid{
 
@@ -959,8 +979,13 @@
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 1000px;
+   /*     height: 1000px;*/
         width: 100vw;
+    }
+    #dashboardSection {
+        position: relative;
+        height: 1000px;
+        background-color: #DCF2F1;
     }
     .container-fluid{
 
@@ -1158,10 +1183,15 @@
     }
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
+    #dashboardSection {
+        position: relative;
+        height: 1000px;
+        background-color: #DCF2F1;
+    }
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 1000px;
+/*        height: 1000px;*/
         width: 100vw;
     }
     .container-fluid{
@@ -1360,10 +1390,15 @@
     }
 }
 @media all and  (min-width:1440px){
+    #dashboardSection {
+        position: relative;
+      height: 1000px;
+        background-color: #DCF2F1;
+    }
     body{
         background-color: #DCF2F1;
         position: relative;
-        height: 1000px;
+/*        height: 1000px;*/
         width: 100vw;
     }
     .container-fluid{
