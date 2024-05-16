@@ -9,7 +9,10 @@
     /*    height: 2000px;*/
         width: 100vw;
     }
-
+    #itemSection{
+        position: relative;
+        height: 1800px;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -314,6 +317,10 @@
 
 }
 @media all and (min-width: 321px ) and (max-width: 460px){
+    #itemSection{
+        position: relative;
+        height: 1800px;
+    }
     body {
 
     position: relative;
@@ -631,7 +638,10 @@
     /*    height: 2000px;*/
         width: 100vw;
     }
-
+    #itemSection{
+        position: relative;
+        height: 1900px;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -942,7 +952,10 @@
     /*    height: 1800px;*/
         width: 100vw;
     }
-
+    #itemSection{
+        position: relative;
+        height: 1700px;
+    }
     .container-fluid {
         background-color: #365486;
     }
@@ -1255,6 +1268,10 @@
         /*height: 600px;*/
         width: 100vw;
     }
+    #itemSection{
+        position: relative;
+        height: 1700px;
+    }
 
     .container-fluid {
         background-color: #365486;
@@ -1284,7 +1301,7 @@
         border-radius: 20px;
     }
     #categoryDiv{
-        width: 18%;
+        width: 17%;
         height: 150px;
         position: absolute;
         bottom: 0;
@@ -1295,7 +1312,7 @@
         border-radius: 10px;
     }
     #productsDiv{
-        width: 18%;
+        width: 17%;
         height: 150px;
         position: absolute;
         bottom: 0;
@@ -1306,7 +1323,7 @@
         border-radius: 10px;
     }
     #sellingDiv{
-        width: 18%;
+        width: 17%;
         height: 150px;
         position: absolute;
         bottom: 0;
@@ -1317,7 +1334,7 @@
         border-radius: 10px;
     }
     #lowStockDiv{
-        width: 18%;
+        width: 17%;
         height: 150px;
         position: absolute;
         bottom: 0;
@@ -1328,7 +1345,7 @@
         border-radius: 10px;
     }
     #outStockDiv{
-        width: 18%;
+        width: 17%;
         height: 150px;
         position: absolute;
         bottom: 0;
@@ -1558,11 +1575,16 @@
 
 }
 @media all and (min-width: 1025px ) and (max-width: 1440px){
+
     body {
 
         position: relative;
    /*     height: 1800px;*/
         width: 100vw;
+    }
+    #itemSection{
+        position: relative;
+        height: 1700px;
     }
 
     .container-fluid {
@@ -1872,6 +1894,10 @@
         position: relative;
        /* height: 1800px;*/
         width: 100vw;
+    }
+    #itemSection{
+        position: relative;
+        height: 1700px;
     }
 
     .container-fluid {

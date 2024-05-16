@@ -92,6 +92,10 @@
   /*      height: 2750px;*/
         width: 100vw;
     }
+    #orderSection{
+        position: relative;
+        height: 2600px;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -276,6 +280,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -432,8 +438,12 @@
     body{
 
         position: relative;
-        height: 2750px;
+        /*height: 2750px;*/
         width: 100vw;
+    }
+    #orderSection{
+        position: relative;
+        height: 2600px;
     }
     .container-fluid{
         background-color: #365486;
@@ -618,6 +628,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -779,6 +791,10 @@
        /* height: 2200px;*/
         width: 100vw;
     }
+    #orderSection{
+        position: relative;
+        height: 2100px;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -792,7 +808,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 100px;
+        top: 50px;
         margin: auto;
     }
     #selectCusDiv{
@@ -969,6 +985,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -1127,6 +1145,10 @@
 
 }
 @media all and (min-width: 769px ) and (max-width: 834px){
+    #orderSection{
+        position: relative;
+        height: 1900px;
+    }
     body{
 
         position: relative;
@@ -1325,6 +1347,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -1483,6 +1507,10 @@
         position: relative;
  /*       height: 2000px;*/
         width: 100vw;
+    }
+    #orderSection{
+        position: relative;
+        height: 1900px;
     }
     .container-fluid{
         background-color: #365486;
@@ -1680,6 +1708,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -1838,6 +1868,10 @@
         position: relative;
       /*  height: 2000px;*/
         width: 100vw;
+    }
+    #orderSection{
+        position: relative;
+        height: 2000px;
     }
     .container-fluid{
         background-color: #365486;
@@ -2041,6 +2075,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
@@ -2194,12 +2230,16 @@
 
 }
 @media all and  (min-width:1440px){
- /*   body{
+  body{
 
         position: relative;
-        height: 1600px;
+        /*height: 1600px;*/
         width: 100vw;
-    }*/
+    }
+    #orderSection{
+        position: relative;
+        height: 1500px;
+    }
     .container-fluid{
         background-color: #365486;
     }
@@ -2382,6 +2422,8 @@
         position: absolute;
         top: 0;
         right: 15px;
+        text-align: center;
+        font-size: 30px;
     }
     #placeOrder{
         position: absolute;
