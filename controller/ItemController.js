@@ -3,7 +3,13 @@ import { itemList} from "../db/db.js";
 let item;
 loadId();
 let selectedIndex;
+loadItemTable();
+$('#nav-inventory').on('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
 
+    // Load the item table
+    loadItemTable();
+});
 function loadId() {
     let itemCode;
     if (itemList.length === 0) {

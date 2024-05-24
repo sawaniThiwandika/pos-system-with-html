@@ -4,6 +4,7 @@ import {CustomerModel} from "../model/CustomerModel.js";
 import {OrderItemDetailsModel} from "../model/OrderItemDetails.js";
 
 
+
 let selectedCustomer = new CustomerModel();
 let order;
 let orderId;
@@ -147,12 +148,11 @@ function updateTotalPrice() {
 function calculateNetTotal() {
     let netTotal = 0;
 
-    // Iterate over each row of the cart table
+
     $('#cartTableBody tr').each(function() {
-        // Extract the total amount from the row
         let totalAmount = parseFloat($(this).find('.colItemTotalCart').text());
 
-        // Add the total amount to the net total
+
         if (!isNaN(totalAmount)) {
             netTotal += totalAmount;
         }
@@ -162,6 +162,25 @@ function calculateNetTotal() {
     $('#totalValue').text(netTotal.toFixed(2));
 }
 
+function subtractQuantity(itemCodeToRemove, itemQtyToRemove) {
+
+    console.log("subtracting quantity for item code:", itemCodeToRemove);
+
+    for (let index = 0; index < itemList.length; index++) {
+        console.log("Checking item at index:"+index+"with code:"+ itemList[index]._itemName);
+
+        if (itemCodeToRemove === itemList[index]._itemCode) {
+            console.log("Found matching item. Old quantity:", itemList[index]._itemQty, "New quantity to add:", itemQtyToRemove);
+            itemList[index]._itemQty = parseFloat(itemList[index]._itemQty) + parseFloat(itemQtyToRemove);
+            console.log("Updated quantity for item code:", itemCodeToRemove, "New quantity:", itemList[index]._itemQty);
+            return;
+
+        }
+    }
+
+    console.log("Item with code", itemCodeToRemove, "not found in the order list.");
+}
+
 function addToCart() {
     $('#cartTableBody').empty();
     order.itemListOrder.forEach((item, index) => {
@@ -169,7 +188,7 @@ function addToCart() {
             var record = `<tr>
                 <td class="colItemCodeCart">${item.itemCode}</td>
                 <td class="colItemNameCart">${item.itemName}</td>
-                <td class="cilItemQtyCart">${item.qty}</td>
+                <td class="colItemQtyCart">${item.qty}</td>
                 <td class="colItemUnitPriceCart">${item.unitPrice}</td>
                 <td class="colItemTotalCart">${item.total}</td>
                 <td class="colItemRemoveButtonCart"><button class="removeFromCart">Remove</button></td>
@@ -178,19 +197,21 @@ function addToCart() {
         }
     });
 
-    // Attach click event listener to the "Remove" buttons
-    $('#cartTableBody').on('click', '.removeFromCart', function() {
-        // Get the item code of the item to remove
-        var itemCodeToRemove = $(this).closest('tr').find('.colItemCodeCart').text();
 
-        // Find the index of the item with the matching item code in the array
+    $('#cartTableBody').on('click', '.removeFromCart', function() {
+
+        var itemCodeToRemove = $(this).closest('tr').find('.colItemCodeCart').text();
+        var itemQtyToRemove = $(this).closest('tr').find('.colItemQtyCart').text();
+
+
         var indexToRemove = order.itemListOrder.findIndex(item => item.itemCode === itemCodeToRemove);
 
-        // Remove the item from the array if found
+
         if (indexToRemove !== -1) {
             order.itemListOrder.splice(indexToRemove, 1);
-            addToCart(); // Rebuild the cart table
-            calculateNetTotal(); // Recalculate the net total
+            addToCart();
+            subtractQuantity(itemCodeToRemove,itemQtyToRemove);
+            calculateNetTotal();
         }
     });
 
@@ -209,15 +230,35 @@ function checkDuplicate() {
     return -1; // Return -1 if no duplicate is found
 }
 
-function updateQuentity(newQty) {
+/*function updateQuentity(newQty) {
     let itemCode = $("#itemCodeFieldOrder").val();
     for (let index = 0; index < order.itemListOrder.length; index++) {
-        if (itemCode === order.itemListOrder[index].itemCode) {
-            order.itemListOrder[index].itemQty=parseFloat(order.itemListOrder[index].itemQty)-parseFloat(newQty);
+        if (itemCode === itemList[index].itemCode) {
+            console.log("inside  update method :",itemList[index].itemCode);
+           // itemList[index].itemQty(parseFloat(order.itemListOrder[index].qty)-parseFloat(newQty));
+        }
+    }
+}*/
+function updateQuentity(newQty) {
+    let itemCode = $("#itemCodeFieldOrder").val();
+    /* var selectedItem = itemList.find(function(item) {
+         return item.itemCode === itemCode;
+     });*/
+    console.log("Updating quantity for item code:", itemCode);
 
+    for (let index = 0; index < itemList.length; index++) {
+        console.log("Checking item at index:"+index+"with code:"+ itemList[index]._itemName);
+
+        if (itemCode === itemList[index]._itemCode) {
+            console.log("Found matching item. Old quantity:", itemList[index]._itemQty, "New quantity to add:", newQty);
+           itemList[index]._itemQty = parseFloat(itemList[index]._itemQty) - parseFloat(newQty);
+            console.log("Updated quantity for item code:", itemCode, "New quantity:", itemList[index]._itemQty);
+            return;
 
         }
     }
+
+    console.log("Item with code", itemCode, "not found in the order list.");
 }
 
 $("#addToCartButtonOrder").on("click", function () {
@@ -225,7 +266,7 @@ $("#addToCartButtonOrder").on("click", function () {
     var unitPrice = parseFloat($("#itemUnitPriceFieldOrder").val());
     var index = checkDuplicate();
 
-    updateQuentity(newQty);
+
 
     if (index > -1) {
         var oldQty = parseFloat(order.itemListOrder[index].qty);
@@ -243,8 +284,9 @@ $("#addToCartButtonOrder").on("click", function () {
         let unitPrice = $("#itemUnitPriceFieldOrder").val();
         let totalPriceOfItem = $("#totalPriceFieldInOrder").val();
         order.itemListOrder.push(new OrderItemDetailsModel(id, itemCode, itemName, qty, unitPrice, totalPriceOfItem));
-        console.log(order.itemListOrder);
+        console.log("ItemList in order: ",order.itemListOrder);
     }
+    updateQuentity(newQty);
     addToCart();
     clearOtherFields();
 });

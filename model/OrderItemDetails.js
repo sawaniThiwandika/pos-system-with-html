@@ -1,7 +1,6 @@
-import {OrderModel} from "./OrderModel.js";
-import {itemList,orderList} from "../db/db.js";
-import {ItemModel} from "./ItemModel.js";
-
+import { OrderModel } from "./OrderModel.js";
+import { itemList, orderList } from "../db/db.js";
+import { ItemModel } from "./ItemModel.js";
 export class OrderItemDetailsModel{
     get itemName() {
         return this._itemName;
