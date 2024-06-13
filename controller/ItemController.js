@@ -42,17 +42,21 @@ $('#submitItemBtn').on('click', (event) => {
     console.log("Before preventDefault()");
     event.preventDefault();
     console.log("After preventDefault()");
-    let itemCode = $('#itemCodeField').val();
-    let unitPrice = $('#itemUnitPriceField').val();
-    let category = $('#itemCategoryField').val();
-    let itemName = $('#itemNameField').val();
-    let itemQty = $('#itemQtyField').val();
+    let validateItem1 = validateItem();
+    if (validateItem1){
+        let itemCode = $('#itemCodeField').val();
+        let unitPrice = $('#itemUnitPriceField').val();
+        let category = $('#itemCategoryField').val();
+        let itemName = $('#itemNameField').val();
+        let itemQty = $('#itemQtyField').val();
 
-    item =new ItemModel(itemCode,unitPrice,category,itemName,itemQty);
-    itemList.push(item);
-    $('#resetItemBtn').click();
-    loadItemTable();
-    console.log(item);
+        item =new ItemModel(itemCode,unitPrice,category,itemName,itemQty);
+        itemList.push(item);
+        $('#resetItemBtn').click();
+        loadItemTable();
+        console.log(item);
+    }
+
 });
 
 
@@ -77,7 +81,8 @@ $('#updateItemBtn').on('click', (event) => {
     let category = $('#itemCategoryField').val();
     let itemName = $('#itemNameField').val();
     let itemQty = $('#itemQtyField').val();
-
+let validateItem2 = validateItem();
+if(validateItem2){
     if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < itemList.length) {
         let selectItem = itemList[selectedIndex];
         selectItem.itemCode =itemCode;
@@ -92,6 +97,9 @@ $('#updateItemBtn').on('click', (event) => {
     } else {
         console.log("No row selected or invalid index");
     }
+}
+
+
 });
 $('#itemTableBody').on('click','tr',function () {
     let index = $(this).index();
@@ -111,3 +119,49 @@ $('#itemTableBody').on('click','tr',function () {
 });
 /*
 $('#itemNameField').*/
+
+function validateItem() {
+    let isValid = true;
+
+
+    let itemId = $('#itemCodeField').val().trim();
+    if (itemId === '') {
+        isValid = false;
+        alert('Please select a item');
+        return isValid;
+    }
+
+
+    let itemName = $('#itemNameField').val().trim();
+    if (itemName === '') {
+        isValid = false;
+        alert('Please enter ItemName');
+        return isValid;
+    }
+
+
+    let itemQty = $('#itemQtyField').val().trim();
+    if (itemQty === '') {
+        isValid = false;
+        alert('Please enter Quantity for the item');
+        return isValid;
+    }
+
+
+    let itemUnitPrice = $('#itemUnitPriceField').val().trim();
+    if (itemUnitPrice === '') {
+        isValid = false;
+        alert('Please enter Unit Price');
+        return isValid;
+    }
+
+
+    let itemContact = $('#itemCategoryField').val().trim();
+    if (itemContact === '') {
+        isValid = false;
+        alert('Please select or input category for item');
+        return isValid;
+    }
+ return true;
+
+}
