@@ -291,7 +291,7 @@ $("#addToCartButtonOrder").on("click", function () {
     clearOtherFields();
 });
 
-function loadOrderList() {
+/*function loadOrderList() {
     $('#orderListTableBody').empty();
     orderList.map((item, index) => {
         var record = `<tr>
@@ -300,11 +300,48 @@ function loadOrderList() {
             <td class="colCustomerNameOrderList">${item.customer.cusName}</td>
             <td class="colDateOrder">${item.date}</td>
             <td class="colTotalOrder">${item.total}</td>
-            <td class="colViewItems"><button>View Items</button></td>
+            <td class="colViewItems"><button class="viewItemsInAOrder">View Items</button></td>
         </tr>`;
         $('#orderListTableBody').append(record);
     });
+
+    /!* load modal*!/
+    $('.viewItemsInAOrder').on('click', function () {
+        var orderIndex = $(this).attr('data-index');
+        var selectedOrder = orderList[orderIndex];
+        console.log("orderIndex "+orderIndex);
+        console.log("selected order "+selectedOrder);
+        populateModalWithOrderItems(selectedOrder);
+        $('#orderItemsModal').modal('show');
+    });
+
+}*/
+
+function loadOrderList() {
+    $('#orderListTableBody').empty();
+    orderList.forEach((item, index) => {
+        var record = `<tr>
+            <td class="colOrderId">${item.id}</td>
+            <td class="colCustomerIdOrderList">${item.customer.cusId}</td>
+            <td class="colCustomerNameOrderList">${item.customer.cusName}</td>
+            <td class="colDateOrder">${item.date}</td>
+            <td class="colTotalOrder">${item.total}</td>
+            <td class="colViewItems"><button class="viewItemsInAOrder" data-index="${index}">View Items</button></td>
+        </tr>`;
+        $('#orderListTableBody').append(record);
+    });
+
+    // Attach click event listener to viewItemsInAOrder buttons
+    $('.viewItemsInAOrder').on('click', function () {
+        var orderIndex = $(this).attr('data-index');
+        var selectedOrder = orderList[orderIndex];
+        console.log("orderIndex: " + orderIndex);
+        console.log("selected order: ", selectedOrder);
+        populateModalWithOrderItems(selectedOrder);
+        $('#orderItemsModal').modal('show');
+    });
 }
+
 
 $("#placeOrder").on("click", function () {
     order.id=orderId;
@@ -314,3 +351,22 @@ $("#placeOrder").on("click", function () {
     loadOrderList();
     loadId();
 });
+
+function populateModalWithOrderItems(order) {
+    var modalBody = $('#modalOrderItemsBody');
+    modalBody.empty();
+    for (var i = 1; i < order.itemListOrder.length; i++) {
+        var item = order.itemListOrder[i];
+        var itemRecord = `<tr>
+            <td>${item.itemCode}</td>
+            <td>${item.itemName}</td>
+            <td>${item.qty}</td>
+            <td>${item.unitPrice}</td>
+            <td>${item.total}</td>
+        </tr>`;
+        modalBody.append(itemRecord);
+    }
+}
+
+
+
