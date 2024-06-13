@@ -367,6 +367,25 @@ function populateModalWithOrderItems(order) {
         modalBody.append(itemRecord);
     }
 }
+$(document).ready(function() {
+    $("#searchBarOrders").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
 
+        $("#orderListTableBody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+
+        $("#orderListTableBody tr:visible").each(function() {
+            var row = $(this);
+            row.find("td").each(function() {
+                var cell = $(this);
+                var cellText = cell.text();
+                var regex = new RegExp('(' + value + ')', 'gi');
+                var highlightedText = cellText.replace(regex, '<span class="highlight">$1</span>');
+                cell.html(highlightedText);
+            });
+        });
+    });
+});
 
 
