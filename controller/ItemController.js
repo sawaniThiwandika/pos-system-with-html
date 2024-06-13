@@ -165,3 +165,23 @@ function validateItem() {
  return true;
 
 }
+$(document).ready(function() {
+    $("#searchBarItems").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+
+        $("#itemTableBody tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+
+        $("#itemTableBody tr:visible").each(function() {
+            var row = $(this);
+            row.find("td").each(function() {
+                var cell = $(this);
+                var cellText = cell.text();
+                var regex = new RegExp('(' + value + ')', 'gi');
+                var highlightedText = cellText.replace(regex, '<span class="highlight">$1</span>');
+                cell.html(highlightedText);
+            });
+        });
+    });
+});
