@@ -19,25 +19,77 @@ function loadId() {
 loadId();
 
 let customer;
-$('#submitCusBtn').on('click',(event)=>{
-     let isValid=validateCustomer();
-    event.preventDefault();
+$('#submitCusBtn').on('click', (event) => {
+    event.preventDefault(); // Prevent form submission
 
-   if(isValid) {
-       let cusId = $('#customerIdField').val();
-       let cusName = $('#customerNameField').val();
-       let cusEmail = $('#customerEmailField').val();
-       let cusAddress = $('#customerAddressField').val();
-       let cusContact = $('#customerContactField').val();
-       let cusAddDate = new Date().toISOString().split('T')[0];
-       customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, cusAddDate);
-       customersList.push(customer);
-       console.log(customer.cusName);
-       $('#resetCusBtn').click();
-       loadTable();
+    let isValid = validateCustomer();
+    if (isValid) {
+        // Gather customer data
+        let cusId = $('#customerIdField').val();
+        let cusName = $('#customerNameField').val();
+        let cusEmail = $('#customerEmailField').val();
+        let cusAddress = $('#customerAddressField').val();
+        let cusContact = $('#customerContactField').val();
+       // let cusAddDate = new Date().toISOString().split('T')[0];
 
-   }
+        let currentDate = new Date();
+        let year = currentDate.getFullYear();
+        let month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+        let day = String(currentDate.getDate()).padStart(2, '0');
+
+        let formattedDate = `${year}-${month}-${day}`;
+        console.log("date "+formattedDate);
+        // Create customer model
+        customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, formattedDate);
+        customersList.push(customer);
+        console.log(customer.cusName);
+        console.log("customer"+customer);
+
+        // Reset form and reload table
+        $('#resetCusBtn').click();
+        loadTable();
+
+        // Convert customer data to JSON
+        const customerJSON = JSON.stringify(customer);
+
+        // Create and configure XMLHttpRequest
+        // Create JSON
+
+
+// Save the data with AJAX
+        const http = new XMLHttpRequest();
+        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+        http.onreadystatechange = () => {
+            if (http.readyState === 4) {
+                if (http.status === 200) {
+                    let contentType = http.getResponseHeader("Content-Type");
+                    console.log("content type "+http);
+                    if (contentType && contentType.includes("application/json")) {
+                        try {
+                            let response = JSON.parse(http.responseText);
+                            console.log(response);
+                        } catch (e) {
+                            console.error("Failed to parse JSON response: ", http.responseText);
+                        }
+                    } else {
+                        console.error("Unexpected content type: ", contentType);
+                        console.error("Response is not JSON: ", http.responseText);
+                    }
+                } else {
+                    console.error("Failed with status: ", http.status);
+                    console.error("Processing stage: ", http.readyState);
+                }
+            } else {
+                console.log("Processing stage: ", http.readyState);
+            }
+        };
+        http.open("POST", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+        http.setRequestHeader("Content-Type", "application/json");
+        http.send(customerJSON);
+
+    }
 });
+
 $('#updateCusBtn').on('click', (event) => {
     event.preventDefault();
     let selectedIndex = $(this).index()+1;
