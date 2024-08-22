@@ -7,7 +7,7 @@ getCustomerList();
 
 function getCustomerList(){
     const http = new XMLHttpRequest();
-
+    customersList.length = 0;
     http.onreadystatechange = () => {
         if (http.readyState === 4) {
             if (http.status === 200) {
@@ -23,6 +23,7 @@ function getCustomerList(){
                             // Create CustomerModel instance with appropriate properties
                             let customer = new CustomerModel(
                                 customerData._cusId,
+                                customerData._cusName,
                                 customerData._cusEmail,
                                 customerData._cusContact,
                                 customerData._cusAddress,
@@ -97,7 +98,8 @@ $('#submitCusBtn').on('click', (event) => {
 
         // Reset form and reload table
         $('#resetCusBtn').click();
-        loadTable();
+        getCustomerList();
+
 
         // Convert customer data to JSON
         const customerJSON = JSON.stringify(customer);
@@ -138,6 +140,8 @@ $('#submitCusBtn').on('click', (event) => {
         http.send(customerJSON);
 
     }
+    loadId();
+    loadTable();
 });
 
 $('#updateCusBtn').on('click', (event) => {
@@ -152,12 +156,12 @@ $('#updateCusBtn').on('click', (event) => {
 
     if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < customersList.length) {
         let selectCustomer = customersList[selectedIndex];
-        selectCustomer.cusId = cusId;
-        selectCustomer.cusName = cusName;
-        selectCustomer.cusEmail = cusEmail;
-        selectCustomer.cusAddress = cusAddress;
-        selectCustomer.cusContact = cusContact;
-        console.log(selectCustomer.cusName);
+        selectCustomer._cusId = cusId;
+        selectCustomer._cusName = cusName;
+        selectCustomer._cusEmail = cusEmail;
+        selectCustomer._cusAddress = cusAddress;
+        selectCustomer._cusContact = cusContact;
+        console.log(selectCustomer._cusName);
 
         $('#resetCusBtn').click();
 
@@ -182,7 +186,7 @@ function loadTable() {
     customersList.map((item, index) => {
         var record = `<tr>
          <td  class="colCustomerId" >${item._cusId}</td>
-            <td class="colCustomerName">${item.cusName}</td>
+            <td class="colCustomerName">${item._cusName}</td>
             <td class="colCustomerAddress">${item._cusAddress}</td>
             <td class="colCustomerEmail">${item._cusEmail}</td>
             <td class="colCustomerContact">${item._cusContact}</td>
