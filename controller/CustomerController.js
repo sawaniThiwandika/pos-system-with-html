@@ -1,5 +1,6 @@
 import {CustomerModel} from "../model/CustomerModel.js";
 import {customersList} from "../db/db.js";
+
 let clickRecord;
 let cusId;
 getCustomerList();
@@ -150,24 +151,65 @@ $('#updateCusBtn').on('click', (event) => {
     let cusId = $('#customerIdField').val();
     let cusName = $('#customerNameField').val();
     let cusEmail = $('#customerEmailField').val();
-    let cusAddress = $('#customerAddressField').val();
-    let cusContact = $('#customerContactField').val();
+    let cusAddress = $('#customerContactField').val();
+    let cusContact = $('#customerAddressField').val();
 
 
     if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < customersList.length) {
         let selectCustomer = customersList[selectedIndex];
+
+        let currentDate = new Date();
+        let year = currentDate.getFullYear();
+        let month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+        let day = String(currentDate.getDate()).padStart(2, '0');
         selectCustomer._cusId = cusId;
         selectCustomer._cusName = cusName;
         selectCustomer._cusEmail = cusEmail;
         selectCustomer._cusAddress = cusAddress;
         selectCustomer._cusContact = cusContact;
+
+
+
+        let formattedDate = `${year}-${month}-${day}`;
         console.log(selectCustomer._cusName);
+        console.log(selectCustomer._cusAddress);
 
         $('#resetCusBtn').click();
-
-
+        customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, formattedDate);
+        const customerJSON = JSON.stringify(customer);
+        const http = new XMLHttpRequest();
+        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+        http.onreadystatechange = () => {
+            if (http.readyState === 4) {
+                if (http.status === 200) {
+                    let contentType = http.getResponseHeader("Content-Type");
+                    console.log("content type "+http);
+                    if (contentType && contentType.includes("application/json")) {
+                        try {
+                            let response = JSON.parse(http.responseText);
+                            console.log(response);
+                        } catch (e) {
+                            console.error("Failed to parse JSON response: ", http.responseText);
+                        }
+                    } else {
+                        console.error("Unexpected content type: ", contentType);
+                        console.error("Response is not JSON: ", http.responseText);
+                    }
+                } else {
+                    console.error("Failed with status: ", http.status);
+                    console.error("Processing stage: ", http.readyState);
+                }
+            } else {
+                console.log("Processing stage: ", http.readyState);
+            }
+        };
+        http.open("PATCH", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+        http.setRequestHeader("Content-Type", "application/json");
+        http.send(customerJSON);
         loadTable();
-    } else {
+    }
+
+     else {
         console.log("No row selected or invalid index");
     }
 });
