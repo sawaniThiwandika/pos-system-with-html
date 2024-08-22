@@ -2,13 +2,64 @@ import {CustomerModel} from "../model/CustomerModel.js";
 import {customersList} from "../db/db.js";
 let clickRecord;
 let cusId;
-loadId();
+getCustomerList();
+
+
+function getCustomerList(){
+    const http = new XMLHttpRequest();
+
+    http.onreadystatechange = () => {
+        if (http.readyState === 4) {
+            if (http.status === 200) {
+                let contentType = http.getResponseHeader("Content-Type");
+                console.log("Content type: " + contentType);
+
+                if (contentType && contentType.includes("application/json")) {
+                    try {
+                        let response = JSON.parse(http.responseText);
+                        console.log("response:", response);  // Log the retrieved customer list
+
+                        response.forEach((customerData) => {
+                            // Create CustomerModel instance with appropriate properties
+                            let customer = new CustomerModel(
+                                customerData._cusId,
+                                customerData._cusEmail,
+                                customerData._cusContact,
+                                customerData._cusAddress,
+                                customerData._addCusDate
+                            );
+                            customersList.push(customer);
+                        });
+                        console.log(customersList);
+                        loadId();
+                        loadTable();
+
+                    } catch (e) {
+                        console.error("Failed to parse JSON response: ", http.responseText);
+                    }
+                } else {
+                    console.error("Unexpected content type: ", contentType);
+                    console.error("Response is not JSON: ", http.responseText);
+                }
+            } else {
+                console.error("Request failed with status: ", http.status);
+            }
+        } else {
+            console.log("Processing stage: ", http.readyState);
+        }
+    };
+
+    // Change the method to GET since we're fetching data
+    http.open("GET", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+    http.send();
+}
 function loadId() {
+
+
     let cusId;
     if (customersList.length === 0) {
         cusId = "C" + 1;
     } else {
-
         let lastCustomerIdNumericPart = parseInt(customersList[customersList.length - 1].cusId.substring(1));
         let newNumericPart = lastCustomerIdNumericPart + 1;
         cusId = "C" + newNumericPart;
@@ -41,7 +92,6 @@ $('#submitCusBtn').on('click', (event) => {
         console.log("date "+formattedDate);
         // Create customer model
         customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, formattedDate);
-        customersList.push(customer);
         console.log(customer.cusName);
         console.log("customer"+customer);
 
