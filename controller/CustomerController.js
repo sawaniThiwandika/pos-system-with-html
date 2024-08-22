@@ -239,6 +239,7 @@ function loadTable() {
 }
 
 $('#cusTableBody').on('click','tr',function () {
+    event.preventDefault();
     let index = $(this).index();
     clickRecord = index;
     let cusId = $(this).find(".colCustomerId").text();
@@ -255,6 +256,42 @@ $('#cusTableBody').on('click','tr',function () {
 });
 $('#deleteCusBtn').on('click',(event)=>{
     event.preventDefault();
+    let cusId = $('#customerIdField').val();
+    console.log("Delete customer: " + cusId);
+
+    const idJSON = JSON.stringify({ cusId: cusId });
+    const http = new XMLHttpRequest();
+    //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+    http.onreadystatechange = () => {
+        if (http.readyState === 4) {
+            if (http.status === 200) {
+                let contentType = http.getResponseHeader("Content-Type");
+                console.log("content type "+http);
+                if (contentType && contentType.includes("application/json")) {
+                    try {
+                        let response = JSON.parse(http.responseText);
+                        console.log(response);
+                    } catch (e) {
+                        console.error("Failed to parse JSON response: ", http.responseText);
+                    }
+                } else {
+                    console.error("Unexpected content type: ", contentType);
+                    console.error("Response is not JSON: ", http.responseText);
+                }
+            } else {
+                console.error("Failed with status: ", http.status);
+                console.error("Processing stage: ", http.readyState);
+            }
+        } else {
+            console.log("Processing stage: ", http.readyState);
+        }
+    };
+    http.open("DELETE", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+    http.setRequestHeader("Content-Type", "application/json");
+    http.send(idJSON);
+
+
+
     customersList.splice(clickRecord, 1);
     loadTable();
 });
