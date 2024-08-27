@@ -1,15 +1,70 @@
 import {ItemModel} from "../model/ItemModel.js";
-import { itemList} from "../db/db.js";
+import {customersList, itemList} from "../db/db.js";
+
+
 let item;
-loadId();
+
 let selectedIndex;
-loadItemTable();
-$('#nav-inventory').on('click', function(event) {
+//getItemList();
+$('#nav-inventory').on('click', function (event) {
     event.preventDefault(); // Prevent default link behavior
 
     // Load the item table
-    loadItemTable();
+    //loadItemTable();
+    getItemList();
 });
+
+function getItemList() {
+    console.log("No w im in GetItem List Method");
+    const http = new XMLHttpRequest();
+    itemList.length = 0;
+    http.onreadystatechange = () => {
+        if (http.readyState === 4) {
+            if (http.status === 200) {
+                let contentType = http.getResponseHeader("Content-Type");
+                console.log("Content type: " + contentType);
+
+                if (contentType && contentType.includes("application/json")) {
+                    try {
+                        let response = JSON.parse(http.responseText);
+                        console.log("response:", response);  // Log the retrieved customer list
+
+                        response.forEach((itemData) => {
+                            // Create CustomerModel instance with appropriate properties
+                            let item = new ItemModel(
+                                itemData._itemCode,
+                                itemData._unitPrice,
+                                itemData._category,
+                                itemData._itemName,
+                                itemData._itemQty,
+
+                            );
+                            itemList.push(item);
+                        });
+                        console.log(itemList);
+                        loadId();
+                        loadItemTable();
+
+                    } catch (e) {
+                        console.error("Failed to parse JSON response: ", http.responseText);
+                    }
+                } else {
+                    console.error("Unexpected content type: ", contentType);
+                    console.error("Response is not JSON: ", http.responseText);
+                }
+            } else {
+                console.error("Request failed with status: ", http.status);
+            }
+        } else {
+            console.log("Processing stage: ", http.readyState);
+        }
+    };
+
+    // Change the method to GET since we're fetching data
+    http.open("GET", "http://localhost:8080/POS_backend_war_exploded/item", true);
+    http.send();
+}
+
 function loadId() {
     let itemCode;
     if (itemList.length === 0) {
@@ -43,19 +98,56 @@ $('#submitItemBtn').on('click', (event) => {
     event.preventDefault();
     console.log("After preventDefault()");
     let validateItem1 = validateItem();
-    if (validateItem1){
+    if (validateItem1) {
         let itemCode = $('#itemCodeField').val();
         let unitPrice = $('#itemUnitPriceField').val();
         let category = $('#itemCategoryField').val();
         let itemName = $('#itemNameField').val();
         let itemQty = $('#itemQtyField').val();
 
-        item =new ItemModel(itemCode,unitPrice,category,itemName,itemQty);
-        itemList.push(item);
+        item = new ItemModel(itemCode, unitPrice, category, itemName, itemQty);
+       // itemList.push(item);
         $('#resetItemBtn').click();
-        loadItemTable();
-        console.log(item);
+
+        const itemJSON = JSON.stringify(item);
+
+        // Create and configure XMLHttpRequest
+        // Create JSON
+
+
+// Save the data with AJAX
+        const http = new XMLHttpRequest();
+        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+        http.onreadystatechange = () => {
+            if (http.readyState === 4) {
+                if (http.status === 200) {
+                    let contentType = http.getResponseHeader("Content-Type");
+                    console.log("content type " + http);
+                    if (contentType && contentType.includes("application/json")) {
+                        try {
+                            let response = JSON.parse(http.responseText);
+                            console.log(response);
+                        } catch (e) {
+                            console.error("Failed to parse JSON response: ", http.responseText);
+                        }
+                    } else {
+                        console.error("Unexpected content type: ", contentType);
+                        console.error("Response is not JSON: ", http.responseText);
+                    }
+                } else {
+                    console.error("Failed with status: ", http.status);
+                    console.error("Processing stage: ", http.readyState);
+                }
+            } else {
+                console.log("Processing stage: ", http.readyState);
+            }
+        };
+        http.open("POST", "http://localhost:8080/POS_backend_war_exploded/item", true);
+        http.setRequestHeader("Content-Type", "application/json");
+        http.send(itemJSON);
+
     }
+
 
 });
 
@@ -70,6 +162,7 @@ $('#resetItemBtn').on('click',(event)=>{
     $('#itemUnitPriceField').val("");
     console.log("reset customer details");
     loadId();
+
 
 });
 $('#updateItemBtn').on('click', (event) => {
