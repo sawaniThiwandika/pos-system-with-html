@@ -455,7 +455,7 @@ $("#placeOrder").on("click", function () {
 function populateModalWithOrderItems(order) {
     var modalBody = $('#modalOrderItemsBody');
     modalBody.empty();
-    for (var i = 1; i < order.itemListOrder.length; i++) {
+    for (var i = 0; i < order.itemListOrder.length; i++) {
         var item = order.itemListOrder[i];
         var itemRecord = `<tr>
             <td>${item.itemCode}</td>
