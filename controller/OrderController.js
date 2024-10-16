@@ -9,6 +9,7 @@ let selectedCustomer = new CustomerModel();
 let order;
 let orderId;
 loadId();
+loadOrderList();
 
 function loadId() {
     order = new OrderModel();
@@ -67,7 +68,7 @@ function populateDatalistCustomerOrder() {
     var datalistForCustomers = $("#customerListForOrder");
     datalistForCustomers.empty();
     $.each(customersList, function(index, item) {
-        datalistForCustomers.append($("<option>", { value: item.cusContact }));
+        datalistForCustomers.append($("<option>", { value: item.cusContact}));
     });
 }
 function updateOtherFieldsCustomerOrder(selectedValue) {
@@ -317,40 +318,139 @@ $("#addToCartButtonOrder").on("click", function () {
 
 }*/
 
-function loadOrderList() {
-    $('#orderListTableBody').empty();
-    orderList.forEach((item, index) => {
-        var record = `<tr>
-            <td class="colOrderId">${item.id}</td>
-            <td class="colCustomerIdOrderList">${item.customer.cusId}</td>
-            <td class="colCustomerNameOrderList">${item.customer.cusName}</td>
-            <td class="colDateOrder">${item.date}</td>
-            <td class="colTotalOrder">${item.total}</td>
-            <td class="colViewItems"><button class="viewItemsInAOrder" data-index="${index}">View Items</button></td>
-        </tr>`;
-        $('#orderListTableBody').append(record);
-    });
 
-    // Attach click event listener to viewItemsInAOrder buttons
-    $('.viewItemsInAOrder').on('click', function () {
-        var orderIndex = $(this).attr('data-index');
-        var selectedOrder = orderList[orderIndex];
-        console.log("orderIndex: " + orderIndex);
-        console.log("selected order: ", selectedOrder);
-        populateModalWithOrderItems(selectedOrder);
-        $('#orderItemsModal').modal('show');
-    });
+
+function loadOrderList() {
+    $('#orderListTableBody').empty(); // Clear existing table rows
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost:8080/pos_system_backend_with_spring/api/v1/order", true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) { // Request is complete
+            if (xhr.status === 200) { // Successfully received response
+                const orderList = JSON.parse(xhr.responseText); // Parse the JSON response
+
+                const frontendOrderList = orderList.map(orderDto => {
+                    console.log('Order DTO:', orderDto); // Log the order DTO being mapped
+                    const customerModel = new CustomerModel(
+                        orderDto.customer.cusId,
+                        orderDto.customer.cusName,
+                        orderDto.customer.cusEmail,
+                        orderDto.customer.cusAddress,
+                        orderDto.customer.cusContact,
+                        orderDto.customer.addCusDate
+                    );
+
+                    const orderItemDetailsList = orderDto.itemListOrder.map(orderDetails => {
+                        console.log('Order Details DTO:', orderDetails); // Log each order detail
+                        return new OrderItemDetailsModel(
+                            // Uncomment if needed
+                            // orderDetails.id,
+                            orderDetails.orderId,
+                            orderDetails.itemCode,
+                            orderDetails.qty,
+                            orderDetails.unitPrice,
+                            orderDetails.total,
+                            orderDetails.itemName
+                        );
+                    });
+
+                    return new OrderModel(
+                        orderDto.id,
+                        customerModel,
+                        orderItemDetailsList,
+                        orderDto.date,
+                        orderDto.total
+                    );
+                });
+
+                // Populate the table with frontendOrderList
+                frontendOrderList.forEach((orderModel, index) => {
+                    const record = `<tr>
+                        <td class="colOrderId">${orderModel._id}</td>
+                        <td class="colCustomerIdOrderList">${orderModel._customer._cusId}</td>
+                        <td class="colCustomerNameOrderList">${orderModel._customer._cusName}</td>
+                        <td class="colDateOrder">${orderModel._date}</td>
+                        <td class="colTotalOrder">${orderModel._total}</td>
+                        <td class="colViewItems">
+                            <button class="viewItemsInAOrder" data-index="${index}">View Items</button>
+                        </td>
+                    </tr>`;
+                    $('#orderListTableBody').append(record); // Append the record to the table body
+                });
+
+                // Attach click event listener to viewItemsInAOrder buttons
+                $('.viewItemsInAOrder').on('click', function () {
+                    const orderIndex = $(this).attr('data-index'); // Get index from the button
+                    const selectedOrder = orderList[orderIndex]; // Get the selected order
+                    console.log("Order Index: " + orderIndex);
+                    console.log("Selected Order: ", selectedOrder);
+                    populateModalWithOrderItems(selectedOrder); // Populate modal with order items
+                    $('#orderItemsModal').modal('show'); // Show the modal
+                });
+            } else {
+                console.error("Failed to load order list:", xhr.statusText); // Handle errors
+            }
+        }
+    };
+
+    xhr.send(); // Send the request
 }
 
 
+
+
 $("#placeOrder").on("click", function () {
-    order.id=orderId;
+    order.id = orderId;
     order.total = $("#totalValue").text().trim();
-    order.date=new Date().toISOString().split('T')[0];
+    order.date = new Date().toISOString().split('T')[0];
     orderList.push(order);
+
+
+
+
+    // Create FormData
+    const formData = new FormData();
+    formData.append("_id", orderId);
+    formData.append("_total", $("#totalValue").text().trim());
+    formData.append("_date", new Date().toISOString().split('T')[0]);
+
+    // Serialize the customer and item list to JSON strings
+    formData.append("_customer", JSON.stringify(order.customer));
+    //formData.append("_itemListOrder", JSON.stringify(order.itemListOrder));
+    formData.append("_itemListOrder", JSON.stringify(order.itemListOrder.map(item => {
+        if (item instanceof OrderItemDetailsModel) {
+            return item.toJson(); // Only call toJson() if item is an instance of OrderItemDetailsModel
+        }
+        console.error("Item is not an instance of OrderItemDetailsModel", item);
+        return null; // or handle it as necessary
+    }).filter(item => item !== null))); // Filter out any null values
+
+
+    // Save the data with AJAX
+    const http = new XMLHttpRequest();
+    http.onreadystatechange = () => {
+        if (http.readyState === 4 && http.status === 200) {
+            let contentType = http.getResponseHeader("Content-Type");
+            if (contentType && contentType.includes("application/json")) {
+                let response = JSON.parse(http.responseText);
+                console.log(response);
+            } else {
+                console.error("Unexpected content type: ", contentType);
+                console.error("Response is not JSON: ", http.responseText);
+            }
+        } else if (http.readyState === 4) {
+            console.error("Failed with status: ", http.status);
+        }
+    };
+    http.open("POST", "http://localhost:8080/pos_system_backend_with_spring/api/v1/order", true);
+    http.send(formData);
+
     loadOrderList();
     loadId();
 });
+
 
 function populateModalWithOrderItems(order) {
     var modalBody = $('#modalOrderItemsBody');

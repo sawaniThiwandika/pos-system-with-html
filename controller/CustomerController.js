@@ -5,10 +5,19 @@ let clickRecord;
 let cusId;
 getCustomerList();
 
+$('#nav-customers').on('click', function (event) {
+    event.preventDefault(); // Prevent default link behavior
 
-function getCustomerList(){
+    // Load the item table
+    //loadItemTable();
+
+    getCustomerList();
+});
+
+function getCustomerList() {
     const http = new XMLHttpRequest();
-    customersList.length = 0;
+    customersList.length = 0; // Clear previous data
+
     http.onreadystatechange = () => {
         if (http.readyState === 4) {
             if (http.status === 200) {
@@ -18,26 +27,27 @@ function getCustomerList(){
                 if (contentType && contentType.includes("application/json")) {
                     try {
                         let response = JSON.parse(http.responseText);
-                        console.log("response:", response);  // Log the retrieved customer list
+                        console.log("Response:", response); // Log the retrieved customer list
 
                         response.forEach((customerData) => {
-                            // Create CustomerModel instance with appropriate properties
-                            let customer = new CustomerModel(
-                                customerData._cusId,
-                                customerData._cusName,
-                                customerData._cusEmail,
-                                customerData._cusContact,
-                                customerData._cusAddress,
-                                customerData._addCusDate
+                            const customer = new CustomerModel(
+                                customerData.cusId,
+                                customerData.cusName,
+                                customerData.cusEmail,
+                                customerData.cusAddress,
+                                customerData.cusContact,
+                                customerData.addCusDate
                             );
                             customersList.push(customer);
                         });
+
                         console.log(customersList);
-                        loadId();
-                        loadTable();
+                        loadId(); // Assuming this function loads some ID related data
+                        loadTable(); // Assuming this function populates a table with customer data
 
                     } catch (e) {
-                        console.error("Failed to parse JSON response: ", http.responseText);
+                        console.error("Failed to parse JSON response: ", e);
+                        console.error("Response text: ", http.responseText);
                     }
                 } else {
                     console.error("Unexpected content type: ", contentType);
@@ -45,28 +55,29 @@ function getCustomerList(){
                 }
             } else {
                 console.error("Request failed with status: ", http.status);
+                console.error("Response text: ", http.responseText);
             }
         } else {
             console.log("Processing stage: ", http.readyState);
         }
     };
 
-    // Change the method to GET since we're fetching data
-    http.open("GET", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+    // Use GET method to fetch customer list
+    http.open("GET", "http://localhost:8080/pos_system_backend_with_spring/api/v1/customer", true);
     http.send();
 }
 function loadId() {
 
 
     let cusId;
-    if (customersList.length === 0) {
+    /*if (customersList.length === 0) {
         cusId = "C" + 1;
     } else {
         let lastCustomerIdNumericPart = parseInt(customersList[customersList.length - 1].cusId.substring(1));
         let newNumericPart = lastCustomerIdNumericPart + 1;
         cusId = "C" + newNumericPart;
-    }
-    $('#customerIdField').val(cusId);
+    }*/
+    $('#customerIdField').val("CustomerId");
 }
 
 loadId();
@@ -95,50 +106,57 @@ $('#submitCusBtn').on('click', (event) => {
         // Create customer model
         customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, formattedDate);
         console.log(customer.cusName);
-        console.log("customer"+customer);
+        console.log("customer" + customer);
 
         // Reset form and reload table
         $('#resetCusBtn').click();
         getCustomerList();
 
 
-        // Convert customer data to JSON
-        const customerJSON = JSON.stringify(customer);
+        const formData = new FormData();
+        formData.append("_cusId", customer.cusId);
+        formData.append("_cusName", customer.cusName);
+        formData.append("_cusEmail", customer.cusEmail);
+        formData.append("_cusAddress", customer.cusAddress);
+        formData.append("_cusContact", customer.cusContact);
+        formData.append("_addCusDate", customer.addCusDate);
 
-        // Create and configure XMLHttpRequest
-        // Create JSON
-
-
-// Save the data with AJAX
+// Create and configure XMLHttpRequest
         const http = new XMLHttpRequest();
-        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+
         http.onreadystatechange = () => {
-            if (http.readyState === 4) {
-                if (http.status === 200) {
+            if (http.readyState === 4) { // Request is done
+                if (http.status === 201) { // Created (201 is usually the status code for resource creation)
+                    console.log("Customer saved successfully");
                     let contentType = http.getResponseHeader("Content-Type");
-                    console.log("content type "+http);
+                    console.log("Content-Type: " + contentType);
+                    console.log("Response Text: " + http.responseText); // Log the raw response before parsing
+
+                    // Check if the content type is JSON
                     if (contentType && contentType.includes("application/json")) {
                         try {
-                            let response = JSON.parse(http.responseText);
-                            console.log(response);
+                            let response = JSON.parse(http.responseText); // Parse response as JSON
+                            console.log(response); // Log the parsed response
                         } catch (e) {
                             console.error("Failed to parse JSON response: ", http.responseText);
                         }
                     } else {
-                        console.error("Unexpected content type: ", contentType);
-                        console.error("Response is not JSON: ", http.responseText);
+                        // Handle non-JSON responses
+                        console.log("Response: ", http.responseText); // Log plain text response
                     }
                 } else {
-                    console.error("Failed with status: ", http.status);
-                    console.error("Processing stage: ", http.readyState);
+                    console.error("Request failed with status: ", http.status);
                 }
             } else {
                 console.log("Processing stage: ", http.readyState);
             }
         };
-        http.open("POST", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
-        http.setRequestHeader("Content-Type", "application/json");
-        http.send(customerJSON);
+
+// Open a connection
+        http.open("POST", "http://localhost:8080/pos_system_backend_with_spring/api/v1/customer", true);
+
+// No need to set Content-Type, as FormData automatically sets it
+        http.send(formData); // Send the FormData
 
     }
     loadId();
@@ -146,72 +164,51 @@ $('#submitCusBtn').on('click', (event) => {
 });
 
 $('#updateCusBtn').on('click', (event) => {
-    event.preventDefault();
-    let selectedIndex = $(this).index()+1;
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get the customer data from the form fields
     let cusId = $('#customerIdField').val();
     let cusName = $('#customerNameField').val();
     let cusEmail = $('#customerEmailField').val();
-    let cusAddress = $('#customerContactField').val();
-    let cusContact = $('#customerAddressField').val();
+    let cusAddress = $('#customerAddressField').val();
+    let cusContact = $('#customerContactField').val();
+    let addCusDate = $('#customerAddDateField').val(); // Ensure this is coming from a form field or set it in JS
 
+    // Check if all fields have values
+    if (cusId && cusName && cusEmail && cusAddress && cusContact) {
+        // Create FormData object to hold form data
+        const formData = new FormData();
+        formData.append("_cusId", cusId);
+        formData.append("_cusName", cusName);
+        formData.append("_cusEmail", cusEmail);
+        formData.append("_cusAddress", cusAddress);
+        formData.append("_cusContact", cusContact);
+        formData.append("_addCusDate", addCusDate);
 
-    if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < customersList.length) {
-        let selectCustomer = customersList[selectedIndex];
-
-        let currentDate = new Date();
-        let year = currentDate.getFullYear();
-        let month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are 0-based
-        let day = String(currentDate.getDate()).padStart(2, '0');
-        selectCustomer._cusId = cusId;
-        selectCustomer._cusName = cusName;
-        selectCustomer._cusEmail = cusEmail;
-        selectCustomer._cusAddress = cusAddress;
-        selectCustomer._cusContact = cusContact;
-
-
-
-        let formattedDate = `${year}-${month}-${day}`;
-        console.log(selectCustomer._cusName);
-        console.log(selectCustomer._cusAddress);
-
-        $('#resetCusBtn').click();
-        customer = new CustomerModel(cusId, cusName, cusEmail, cusAddress, cusContact, formattedDate);
-        const customerJSON = JSON.stringify(customer);
+        // Create and configure XMLHttpRequest for sending the data
         const http = new XMLHttpRequest();
-        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+
         http.onreadystatechange = () => {
-            if (http.readyState === 4) {
-                if (http.status === 200) {
-                    let contentType = http.getResponseHeader("Content-Type");
-                    console.log("content type "+http);
-                    if (contentType && contentType.includes("application/json")) {
-                        try {
-                            let response = JSON.parse(http.responseText);
-                            console.log(response);
-                        } catch (e) {
-                            console.error("Failed to parse JSON response: ", http.responseText);
-                        }
-                    } else {
-                        console.error("Unexpected content type: ", contentType);
-                        console.error("Response is not JSON: ", http.responseText);
-                    }
+            if (http.readyState === 4) { // Request is done
+                if (http.status === 200) { // Success
+                    console.log("Customer updated successfully");
+                    console.log("Response Text: ", http.responseText); // Log the raw response
                 } else {
-                    console.error("Failed with status: ", http.status);
-                    console.error("Processing stage: ", http.readyState);
+                    console.error("Request failed with status: ", http.status);
+                    console.error("Response Text: ", http.responseText);
                 }
-            } else {
-                console.log("Processing stage: ", http.readyState);
             }
         };
-        http.open("PATCH", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
-        http.setRequestHeader("Content-Type", "application/json");
-        http.send(customerJSON);
-        loadTable();
-    }
 
-     else {
-        console.log("No row selected or invalid index");
+        // Open a connection to the update customer endpoint
+        http.open("PUT", "http://localhost:8080/pos_system_backend_with_spring/api/v1/customer", true);
+
+        // No need to set Content-Type, as FormData automatically sets the boundary for multipart form data
+        http.send(formData); // Send the FormData
+    } else {
+        console.error("One or more form fields are empty.");
     }
+    loadTable();
 });
 $('#resetCusBtn').on('click',(event)=>{
     event.preventDefault();
@@ -286,7 +283,7 @@ $('#deleteCusBtn').on('click',(event)=>{
             console.log("Processing stage: ", http.readyState);
         }
     };
-    http.open("DELETE", "http://localhost:8080/POS_backend_war_exploded/Customer", true);
+    http.open("DELETE", `http://localhost:8080/pos_system_backend_with_spring/api/v1/customer/${cusId}`, true);
     http.setRequestHeader("Content-Type", "application/json");
     http.send(idJSON);
 

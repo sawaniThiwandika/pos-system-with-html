@@ -9,7 +9,16 @@ export class CustomerModel{
         this._addCusDate = addCusDate;
 
     }
-
+    toJSON() {
+        return {
+            cusId: this._cusId,
+            cusName: this._cusName,
+            cusEmail: this._cusEmail,
+            cusAddress: this._cusAddress,
+            cusContact: this._cusContact,
+            addCusDate: this._addCusDate
+        };
+    }
 
 
     set addCusDate(value) {

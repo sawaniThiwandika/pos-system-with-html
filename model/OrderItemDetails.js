@@ -58,4 +58,14 @@ export class OrderItemDetailsModel{
         this._total = total;
         this._itemName = itemName;
     }
+    toJson() {
+        return {
+            orderId: this._orderId,
+            itemCode: this._itemCode,
+            itemName: this._itemName,
+            qty: this._qty,
+            unitPrice: this._unitPrice,
+            total: this._total,
+        };
+    }
 }

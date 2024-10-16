@@ -5,13 +5,13 @@ import {customersList, itemList} from "../db/db.js";
 let item;
 
 let selectedIndex;
-//getItemList();
+getItemList();
 $('#nav-inventory').on('click', function (event) {
     event.preventDefault(); // Prevent default link behavior
 
     // Load the item table
     //loadItemTable();
-    getItemList();
+    //getItemList();
 });
 
 function getItemList() {
@@ -32,11 +32,11 @@ function getItemList() {
                         response.forEach((itemData) => {
                             // Create CustomerModel instance with appropriate properties
                             let item = new ItemModel(
-                                itemData._itemCode,
-                                itemData._unitPrice,
-                                itemData._category,
-                                itemData._itemName,
-                                itemData._itemQty,
+                                itemData.itemCode,
+                                itemData.unitPrice,
+                                itemData.category,
+                                itemData.itemName,
+                                itemData.itemQty,
 
                             );
                             itemList.push(item);
@@ -61,7 +61,7 @@ function getItemList() {
     };
 
     // Change the method to GET since we're fetching data
-    http.open("GET", "http://localhost:8080/POS_backend_war_exploded/item", true);
+    http.open("GET", "http://localhost:8080/pos_system_backend_with_spring/api/v1/item", true);
     http.send();
 }
 
@@ -109,11 +109,16 @@ $('#submitItemBtn').on('click', (event) => {
        // itemList.push(item);
         $('#resetItemBtn').click();
 
-        const itemJSON = JSON.stringify(item);
+        //const itemJSON = JSON.stringify(item);
 
         // Create and configure XMLHttpRequest
         // Create JSON
-
+        const formData = new FormData();
+        formData.append("_itemCode", itemCode);
+        formData.append("_unitPrice", unitPrice);
+        formData.append("_category", category);
+        formData.append("_itemName", itemName);
+        formData.append("_itemQty", itemQty);
 
 // Save the data with AJAX
         const http = new XMLHttpRequest();
@@ -142,9 +147,8 @@ $('#submitItemBtn').on('click', (event) => {
                 console.log("Processing stage: ", http.readyState);
             }
         };
-        http.open("POST", "http://localhost:8080/POS_backend_war_exploded/item", true);
-        http.setRequestHeader("Content-Type", "application/json");
-        http.send(itemJSON);
+        http.open("POST", "http://localhost:8080/pos_system_backend_with_spring/api/v1/item", true);
+        http.send(formData);
 
     }
 
@@ -184,6 +188,48 @@ if(validateItem2){
         selectItem.category =category;
         selectItem.itemQty = itemQty;
         console.log(selectItem.itemCode);
+
+
+        //const itemJSON = JSON.stringify(selectItem);
+        const formData = new FormData();
+        formData.append("_itemCode", itemCode);
+        formData.append("_unitPrice", unitPrice);
+        formData.append("_category", category);
+        formData.append("_itemName", itemName);
+        formData.append("_itemQty", itemQty);
+
+        const http = new XMLHttpRequest();
+        //const http=new XMLHttpRequest().setRequestHeader("Content-Type","application/json");
+        http.onreadystatechange = () => {
+            if (http.readyState === 4) {
+                if (http.status === 200) {
+                    let contentType = http.getResponseHeader("Content-Type");
+                    console.log("content type "+http);
+                    if (contentType && contentType.includes("application/json")) {
+                        try {
+                            let response = JSON.parse(http.responseText);
+                            console.log(response);
+                        } catch (e) {
+                            console.error("Failed to parse JSON response: ", http.responseText);
+                        }
+                    } else {
+                        console.error("Unexpected content type: ", contentType);
+                        console.error("Response is not JSON: ", http.responseText);
+                    }
+                } else {
+                    console.error("Failed with status: ", http.status);
+                    console.error("Processing stage: ", http.readyState);
+                }
+            } else {
+                console.log("Processing stage: ", http.readyState);
+            }
+        };
+        http.open("PUT", "http://localhost:8080/pos_system_backend_with_spring/api/v1/item", true);
+      //  http.setRequestHeader("Content-Type", "application/json");
+        http.send(formData);
+        loadItemTable();
+
+
 
         $('#resetItemBtn').click();
         loadItemTable();
