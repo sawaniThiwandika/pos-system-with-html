@@ -8,7 +8,7 @@ $('#nav-dashboard').on('click',()=>{
     console.log("clicked");
     loadValues();
 
-})
+});
 $('#nav-customers').on('click',()=>{
     $('#customerSection').removeClass("close");
     $('#customerSection').addClass("open");

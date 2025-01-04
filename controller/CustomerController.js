@@ -6,7 +6,7 @@ let cusId;
 getCustomerList();
 
 $('#nav-customers').on('click', function (event) {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault();
 
     // Load the item table
     //loadItemTable();
@@ -16,7 +16,7 @@ $('#nav-customers').on('click', function (event) {
 
 function getCustomerList() {
     const http = new XMLHttpRequest();
-    customersList.length = 0; // Clear previous data
+    customersList.length = 0;
 
     http.onreadystatechange = () => {
         if (http.readyState === 4) {
@@ -27,7 +27,7 @@ function getCustomerList() {
                 if (contentType && contentType.includes("application/json")) {
                     try {
                         let response = JSON.parse(http.responseText);
-                        console.log("Response:", response); // Log the retrieved customer list
+                        console.log("Response:", response);
 
                         response.forEach((customerData) => {
                             const customer = new CustomerModel(
